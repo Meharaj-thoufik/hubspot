@@ -1,0 +1,42 @@
+{
+  "collectionName": "components_core_buttons",
+  "info": {
+    "displayName": "Button",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "label": {
+      "type": "string"
+    },
+    "href": {
+      "type": "string"
+    },
+    "variant": {
+      "type": "enumeration",
+      "enum": [
+        "default",
+        "outline",
+        "ghost",
+        "secondary",
+        "destructive",
+        "link"
+      ]
+    },
+    "icon": {
+      "type": "string"
+    },
+    "formMode": {
+      "type": "enumeration",
+      "enum": [
+        "booking",
+        "contact",
+        "download",
+        "undefined"
+      ]
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

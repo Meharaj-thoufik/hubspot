@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_core_headers",
+  "info": {
+    "displayName": "Header",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "text"
+    },
+    "highlight": {
+      "type": "string"
+    },
+    "badge": {
+      "type": "string"
+    }
+  }
+}
