@@ -16,7 +16,7 @@
     }
   },
   "attributes": {
-    "Product": {
+    "product": {
       "type": "component",
       "repeatable": true,
       "component": "core.button",
@@ -26,7 +26,7 @@
         }
       }
     },
-    "Industry": {
+    "industry": {
       "type": "component",
       "repeatable": true,
       "pluginOptions": {
@@ -36,7 +36,7 @@
       },
       "component": "core.button"
     },
-    "More": {
+    "more": {
       "type": "component",
       "repeatable": true,
       "component": "core.button",

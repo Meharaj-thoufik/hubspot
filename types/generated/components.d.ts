@@ -20,6 +20,35 @@ export interface CoreButton extends Struct.ComponentSchema {
   };
 }
 
+export interface CoreCard extends Struct.ComponentSchema {
+  collectionName: 'components_core_cards';
+  info: {
+    displayName: 'Card';
+  };
+  attributes: {
+    authorName: Schema.Attribute.String;
+    headline: Schema.Attribute.String;
+    imageUrl: Schema.Attribute.String;
+    publishedDate: Schema.Attribute.String;
+    sourceName: Schema.Attribute.String;
+    summary: Schema.Attribute.String;
+  };
+}
+
+export interface CoreContact extends Struct.ComponentSchema {
+  collectionName: 'components_core_contacts';
+  info: {
+    displayName: 'Contact';
+  };
+  attributes: {
+    address: Schema.Attribute.String;
+    emailHref: Schema.Attribute.String;
+    emailLabel: Schema.Attribute.String;
+    phoneHref: Schema.Attribute.String;
+    phoneLabel: Schema.Attribute.String;
+  };
+}
+
 export interface CoreHeader extends Struct.ComponentSchema {
   collectionName: 'components_core_headers';
   info: {
@@ -31,6 +60,18 @@ export interface CoreHeader extends Struct.ComponentSchema {
     highlight: Schema.Attribute.String;
     subtitle: Schema.Attribute.Text;
     title: Schema.Attribute.String;
+  };
+}
+
+export interface CoreHighlight extends Struct.ComponentSchema {
+  collectionName: 'components_core_highlights';
+  info: {
+    description: '';
+    displayName: ' Highlight';
+  };
+  attributes: {
+    icon: Schema.Attribute.String;
+    label: Schema.Attribute.String;
   };
 }
 
@@ -52,12 +93,75 @@ export interface CoreImage extends Struct.ComponentSchema {
   };
 }
 
+export interface CoreList extends Struct.ComponentSchema {
+  collectionName: 'components_core_lists';
+  info: {
+    displayName: 'List';
+  };
+  attributes: {
+    itemFour: Schema.Attribute.String;
+    itemOne: Schema.Attribute.String;
+    itemThree: Schema.Attribute.String;
+    itemTwo: Schema.Attribute.String;
+  };
+}
+
+export interface SharedCallout extends Struct.ComponentSchema {
+  collectionName: 'components_shared_callouts';
+  info: {
+    description: '';
+    displayName: 'Callout';
+  };
+  attributes: {
+    button: Schema.Attribute.Component<'core.button', false>;
+    header: Schema.Attribute.Component<'core.header', false>;
+    list: Schema.Attribute.Component<'core.list', false>;
+    subtitle: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+  };
+}
+
+export interface SharedHero extends Struct.ComponentSchema {
+  collectionName: 'components_shared_heroes';
+  info: {
+    description: '';
+    displayName: 'Hero';
+  };
+  attributes: {
+    button: Schema.Attribute.Component<'core.button', true>;
+    description: Schema.Attribute.Text;
+    heading: Schema.Attribute.Component<'core.header', false>;
+    highlight: Schema.Attribute.Component<'core.highlight', true>;
+    image: Schema.Attribute.Component<'core.image', false>;
+  };
+}
+
+export interface SharedTextStack extends Struct.ComponentSchema {
+  collectionName: 'components_shared_text_stacks';
+  info: {
+    description: '';
+    displayName: 'Block';
+  };
+  attributes: {
+    item: Schema.Attribute.Component<'core.header', false>;
+    subtitle: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'core.button': CoreButton;
+      'core.card': CoreCard;
+      'core.contact': CoreContact;
       'core.header': CoreHeader;
+      'core.highlight': CoreHighlight;
       'core.image': CoreImage;
+      'core.list': CoreList;
+      'shared.callout': SharedCallout;
+      'shared.hero': SharedHero;
+      'shared.text-stack': SharedTextStack;
     }
   }
 }

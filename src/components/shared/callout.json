@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_shared_callouts",
+  "info": {
+    "displayName": "Callout",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "header": {
+      "type": "component",
+      "repeatable": false,
+      "component": "core.header"
+    },
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "text"
+    },
+    "list": {
+      "type": "component",
+      "repeatable": false,
+      "component": "core.list"
+    },
+    "button": {
+      "type": "component",
+      "repeatable": false,
+      "component": "core.button"
+    }
+  }
+}

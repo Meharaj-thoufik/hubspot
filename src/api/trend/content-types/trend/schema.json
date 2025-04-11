@@ -1,0 +1,57 @@
+{
+  "kind": "singleType",
+  "collectionName": "trends",
+  "info": {
+    "singularName": "trend",
+    "pluralName": "trends",
+    "displayName": "Trend",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "herosection": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.hero",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "noiseSection": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.text-stack"
+    },
+    "trendHeader": {
+      "type": "component",
+      "repeatable": false,
+      "component": "core.header"
+    },
+    "trendFooter": {
+      "type": "component",
+      "repeatable": false,
+      "component": "core.header"
+    },
+    "frustrationSection": {
+      "type": "dynamiczone",
+      "components": [
+        "shared.text-stack",
+        "shared.callout"
+      ]
+    },
+    "newsletterCallout": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.callout"
+    }
+  }
+}

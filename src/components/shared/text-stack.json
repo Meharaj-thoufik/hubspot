@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_shared_text_stacks",
+  "info": {
+    "displayName": "Block",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "text"
+    },
+    "item": {
+      "type": "component",
+      "repeatable": false,
+      "component": "core.header"
+    }
+  }
+}

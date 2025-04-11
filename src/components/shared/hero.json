@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_shared_heroes",
+  "info": {
+    "displayName": "Hero",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "component",
+      "repeatable": false,
+      "component": "core.header"
+    },
+    "description": {
+      "type": "text"
+    },
+    "highlight": {
+      "type": "component",
+      "repeatable": true,
+      "component": "core.highlight"
+    },
+    "button": {
+      "type": "component",
+      "repeatable": true,
+      "component": "core.button"
+    },
+    "image": {
+      "type": "component",
+      "repeatable": false,
+      "component": "core.image"
+    }
+  }
+}

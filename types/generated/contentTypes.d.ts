@@ -372,6 +372,7 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
 export interface ApiFooterFooter extends Struct.SingleTypeSchema {
   collectionName: 'footers';
   info: {
+    description: '';
     displayName: 'Footer';
     pluralName: 'footers';
     singularName: 'footer';
@@ -380,17 +381,23 @@ export interface ApiFooterFooter extends Struct.SingleTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    companyInfo: Schema.Attribute.Text;
+    companyName: Schema.Attribute.String & Schema.Attribute.DefaultTo<'LMNAs'>;
+    contact: Schema.Attribute.Component<'core.contact', false>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    hrlo: Schema.Attribute.String;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::footer.footer'
     > &
       Schema.Attribute.Private;
+    more: Schema.Attribute.Component<'core.button', true>;
+    policies: Schema.Attribute.Component<'core.button', true>;
+    products: Schema.Attribute.Component<'core.button', true>;
     publishedAt: Schema.Attribute.DateTime;
+    socials: Schema.Attribute.Component<'core.button', true>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -417,7 +424,7 @@ export interface ApiNavbarNavbar extends Struct.SingleTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    Industry: Schema.Attribute.Component<'core.button', true> &
+    industry: Schema.Attribute.Component<'core.button', true> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -425,19 +432,61 @@ export interface ApiNavbarNavbar extends Struct.SingleTypeSchema {
       }>;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::navbar.navbar'>;
-    More: Schema.Attribute.Component<'core.button', true> &
+    more: Schema.Attribute.Component<'core.button', true> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }>;
-    Product: Schema.Attribute.Component<'core.button', true> &
+    product: Schema.Attribute.Component<'core.button', true> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }>;
     publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiTrendTrend extends Struct.SingleTypeSchema {
+  collectionName: 'trends';
+  info: {
+    description: '';
+    displayName: 'Trend';
+    pluralName: 'trends';
+    singularName: 'trend';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    frustrationSection: Schema.Attribute.DynamicZone<
+      ['shared.text-stack', 'shared.callout']
+    >;
+    herosection: Schema.Attribute.Component<'shared.hero', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::trend.trend'>;
+    newsletterCallout: Schema.Attribute.Component<'shared.callout', false>;
+    noiseSection: Schema.Attribute.Component<'shared.text-stack', true>;
+    publishedAt: Schema.Attribute.DateTime;
+    trendFooter: Schema.Attribute.Component<'core.header', false>;
+    trendHeader: Schema.Attribute.Component<'core.header', false>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -955,6 +1004,7 @@ declare module '@strapi/strapi' {
       'admin::user': AdminUser;
       'api::footer.footer': ApiFooterFooter;
       'api::navbar.navbar': ApiNavbarNavbar;
+      'api::trend.trend': ApiTrendTrend;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;
