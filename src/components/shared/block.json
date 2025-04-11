@@ -1,8 +1,7 @@
 {
-  "collectionName": "components_shared_text_stacks",
+  "collectionName": "components_shared_blocks",
   "info": {
-    "displayName": "Block",
-    "description": ""
+    "displayName": "Block"
   },
   "options": {},
   "attributes": {
@@ -12,10 +11,10 @@
     "subtitle": {
       "type": "text"
     },
-    "item": {
+    "list": {
       "type": "component",
       "repeatable": false,
-      "component": "core.header"
+      "component": "core.list"
     }
   }
 }

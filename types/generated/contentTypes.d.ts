@@ -454,7 +454,6 @@ export interface ApiNavbarNavbar extends Struct.SingleTypeSchema {
 export interface ApiTrendTrend extends Struct.SingleTypeSchema {
   collectionName: 'trends';
   info: {
-    description: '';
     displayName: 'Trend';
     pluralName: 'trends';
     singularName: 'trend';
@@ -462,28 +461,19 @@ export interface ApiTrendTrend extends Struct.SingleTypeSchema {
   options: {
     draftAndPublish: true;
   };
-  pluginOptions: {
-    i18n: {
-      localized: true;
-    };
-  };
   attributes: {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     frustrationSection: Schema.Attribute.DynamicZone<
-      ['shared.text-stack', 'shared.callout']
+      ['shared.block', 'shared.callout']
     >;
-    herosection: Schema.Attribute.Component<'shared.hero', false> &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    locale: Schema.Attribute.String;
-    localizations: Schema.Attribute.Relation<'oneToMany', 'api::trend.trend'>;
+    herosection: Schema.Attribute.Component<'shared.hero', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::trend.trend'> &
+      Schema.Attribute.Private;
     newsletterCallout: Schema.Attribute.Component<'shared.callout', false>;
-    noiseSection: Schema.Attribute.Component<'shared.text-stack', true>;
+    noiseSection: Schema.Attribute.Component<'shared.block', false>;
     publishedAt: Schema.Attribute.DateTime;
     trendFooter: Schema.Attribute.Component<'core.header', false>;
     trendHeader: Schema.Attribute.Component<'core.header', false>;

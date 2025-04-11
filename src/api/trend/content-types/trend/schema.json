@@ -4,32 +4,21 @@
   "info": {
     "singularName": "trend",
     "pluralName": "trends",
-    "displayName": "Trend",
-    "description": ""
+    "displayName": "Trend"
   },
   "options": {
     "draftAndPublish": true
-  },
-  "pluginOptions": {
-    "i18n": {
-      "localized": true
-    }
   },
   "attributes": {
     "herosection": {
       "type": "component",
       "repeatable": false,
-      "component": "shared.hero",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
+      "component": "shared.hero"
     },
     "noiseSection": {
       "type": "component",
-      "repeatable": true,
-      "component": "shared.text-stack"
+      "repeatable": false,
+      "component": "shared.block"
     },
     "trendHeader": {
       "type": "component",
@@ -44,7 +33,7 @@
     "frustrationSection": {
       "type": "dynamiczone",
       "components": [
-        "shared.text-stack",
+        "shared.block",
         "shared.callout"
       ]
     },

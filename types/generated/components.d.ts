@@ -106,6 +106,18 @@ export interface CoreList extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedBlock extends Struct.ComponentSchema {
+  collectionName: 'components_shared_blocks';
+  info: {
+    displayName: 'Block';
+  };
+  attributes: {
+    list: Schema.Attribute.Component<'core.list', false>;
+    subtitle: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface SharedCallout extends Struct.ComponentSchema {
   collectionName: 'components_shared_callouts';
   info: {
@@ -136,19 +148,6 @@ export interface SharedHero extends Struct.ComponentSchema {
   };
 }
 
-export interface SharedTextStack extends Struct.ComponentSchema {
-  collectionName: 'components_shared_text_stacks';
-  info: {
-    description: '';
-    displayName: 'Block';
-  };
-  attributes: {
-    item: Schema.Attribute.Component<'core.header', false>;
-    subtitle: Schema.Attribute.Text;
-    title: Schema.Attribute.String;
-  };
-}
-
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
@@ -159,9 +158,9 @@ declare module '@strapi/strapi' {
       'core.highlight': CoreHighlight;
       'core.image': CoreImage;
       'core.list': CoreList;
+      'shared.block': SharedBlock;
       'shared.callout': SharedCallout;
       'shared.hero': SharedHero;
-      'shared.text-stack': SharedTextStack;
     }
   }
 }
