@@ -4,7 +4,8 @@
   "info": {
     "singularName": "trend",
     "pluralName": "trends",
-    "displayName": "Trend"
+    "displayName": "Trend",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -33,7 +34,7 @@
     "frustrationSection": {
       "type": "dynamiczone",
       "components": [
-        "shared.block",
+        "core.header",
         "shared.callout"
       ]
     },

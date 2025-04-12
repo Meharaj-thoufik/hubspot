@@ -380,24 +380,67 @@ export interface ApiFooterFooter extends Struct.SingleTypeSchema {
   options: {
     draftAndPublish: true;
   };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
   attributes: {
-    companyInfo: Schema.Attribute.Text;
-    companyName: Schema.Attribute.String & Schema.Attribute.DefaultTo<'LMNAs'>;
-    contact: Schema.Attribute.Component<'core.contact', false>;
+    companyInfo: Schema.Attribute.Text &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    companyName: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }> &
+      Schema.Attribute.DefaultTo<'LMNAs'>;
+    contact: Schema.Attribute.Component<'core.contact', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::footer.footer'
-    > &
-      Schema.Attribute.Private;
-    more: Schema.Attribute.Component<'core.button', true>;
-    policies: Schema.Attribute.Component<'core.button', true>;
-    products: Schema.Attribute.Component<'core.button', true>;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::footer.footer'>;
+    menu: Schema.Attribute.Component<'core.list', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    more: Schema.Attribute.Component<'core.button', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    policies: Schema.Attribute.Component<'core.button', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    products: Schema.Attribute.Component<'core.button', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     publishedAt: Schema.Attribute.DateTime;
-    socials: Schema.Attribute.Component<'core.button', true>;
+    socials: Schema.Attribute.Component<'core.button', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -430,8 +473,26 @@ export interface ApiNavbarNavbar extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
+    language: Schema.Attribute.Component<'core.button', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::navbar.navbar'>;
+    logo: Schema.Attribute.Component<'core.button', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    menu: Schema.Attribute.Component<'core.button', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     more: Schema.Attribute.Component<'core.button', true> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -454,6 +515,7 @@ export interface ApiNavbarNavbar extends Struct.SingleTypeSchema {
 export interface ApiTrendTrend extends Struct.SingleTypeSchema {
   collectionName: 'trends';
   info: {
+    description: '';
     displayName: 'Trend';
     pluralName: 'trends';
     singularName: 'trend';
@@ -466,7 +528,7 @@ export interface ApiTrendTrend extends Struct.SingleTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     frustrationSection: Schema.Attribute.DynamicZone<
-      ['shared.block', 'shared.callout']
+      ['core.header', 'shared.callout']
     >;
     herosection: Schema.Attribute.Component<'shared.hero', false>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
