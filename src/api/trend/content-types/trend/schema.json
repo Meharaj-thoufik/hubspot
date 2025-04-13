@@ -16,7 +16,7 @@
     }
   },
   "attributes": {
-    "herosection": {
+    "heroSection": {
       "type": "component",
       "repeatable": false,
       "component": "shared.hero",

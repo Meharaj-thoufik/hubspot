@@ -521,7 +521,7 @@ export interface ApiTrendTrend extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
-    herosection: Schema.Attribute.Component<'shared.hero', false> &
+    heroSection: Schema.Attribute.Component<'shared.hero', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
