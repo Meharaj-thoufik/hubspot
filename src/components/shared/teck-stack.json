@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_shared_teck_stacks",
+  "info": {
+    "displayName": "TeckStack",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "component",
+      "repeatable": false,
+      "component": "core.header"
+    },
+    "point": {
+      "type": "component",
+      "repeatable": true,
+      "component": "core.highlight"
+    }
+  }
+}

@@ -70,6 +70,7 @@ export interface CoreHighlight extends Struct.ComponentSchema {
     displayName: ' Highlight';
   };
   attributes: {
+    description: Schema.Attribute.Text;
     icon: Schema.Attribute.String;
     label: Schema.Attribute.String;
   };
@@ -148,6 +149,18 @@ export interface SharedHero extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedTeckStack extends Struct.ComponentSchema {
+  collectionName: 'components_shared_teck_stacks';
+  info: {
+    description: '';
+    displayName: 'TeckStack';
+  };
+  attributes: {
+    heading: Schema.Attribute.Component<'core.header', false>;
+    point: Schema.Attribute.Component<'core.highlight', true>;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
@@ -161,6 +174,7 @@ declare module '@strapi/strapi' {
       'shared.block': SharedBlock;
       'shared.callout': SharedCallout;
       'shared.hero': SharedHero;
+      'shared.teck-stack': SharedTeckStack;
     }
   }
 }

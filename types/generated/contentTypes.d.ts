@@ -399,12 +399,7 @@ export interface ApiFooterFooter extends Struct.SingleTypeSchema {
         };
       }> &
       Schema.Attribute.DefaultTo<'LMNAs'>;
-    contact: Schema.Attribute.Component<'core.contact', false> &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
+    contact: Schema.Attribute.Component<'core.contact', false>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -416,31 +411,11 @@ export interface ApiFooterFooter extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
-    more: Schema.Attribute.Component<'core.button', true> &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    policies: Schema.Attribute.Component<'core.button', true> &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    products: Schema.Attribute.Component<'core.button', true> &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
+    more: Schema.Attribute.Component<'core.button', true>;
+    policies: Schema.Attribute.Component<'core.button', true>;
+    product: Schema.Attribute.Component<'core.button', true>;
     publishedAt: Schema.Attribute.DateTime;
-    socials: Schema.Attribute.Component<'core.button', true> &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
+    social: Schema.Attribute.Component<'core.button', true>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -523,22 +498,56 @@ export interface ApiTrendTrend extends Struct.SingleTypeSchema {
   options: {
     draftAndPublish: true;
   };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
   attributes: {
+    calloutSection: Schema.Attribute.Component<'shared.callout', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     frustrationSection: Schema.Attribute.DynamicZone<
       ['core.header', 'shared.callout']
-    >;
-    herosection: Schema.Attribute.Component<'shared.hero', false>;
-    locale: Schema.Attribute.String & Schema.Attribute.Private;
-    localizations: Schema.Attribute.Relation<'oneToMany', 'api::trend.trend'> &
-      Schema.Attribute.Private;
-    newsletterCallout: Schema.Attribute.Component<'shared.callout', false>;
-    noiseSection: Schema.Attribute.Component<'shared.block', false>;
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    herosection: Schema.Attribute.Component<'shared.hero', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::trend.trend'>;
+    noiseSection: Schema.Attribute.Component<'shared.teck-stack', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     publishedAt: Schema.Attribute.DateTime;
-    trendFooter: Schema.Attribute.Component<'core.header', false>;
-    trendHeader: Schema.Attribute.Component<'core.header', false>;
+    trendFooter: Schema.Attribute.Component<'core.header', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    trendHeader: Schema.Attribute.Component<'core.header', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

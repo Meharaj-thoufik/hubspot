@@ -10,38 +10,73 @@
   "options": {
     "draftAndPublish": true
   },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
   "attributes": {
     "herosection": {
       "type": "component",
       "repeatable": false,
-      "component": "shared.hero"
-    },
-    "noiseSection": {
-      "type": "component",
-      "repeatable": false,
-      "component": "shared.block"
+      "component": "shared.hero",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "trendHeader": {
       "type": "component",
       "repeatable": false,
-      "component": "core.header"
+      "component": "core.header",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "trendFooter": {
       "type": "component",
       "repeatable": false,
-      "component": "core.header"
+      "component": "core.header",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "noiseSection": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.teck-stack",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "frustrationSection": {
       "type": "dynamiczone",
       "components": [
         "core.header",
         "shared.callout"
-      ]
+      ],
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
-    "newsletterCallout": {
+    "calloutSection": {
       "type": "component",
       "repeatable": false,
-      "component": "shared.callout"
+      "component": "shared.callout",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }
