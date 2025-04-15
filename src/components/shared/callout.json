@@ -17,15 +17,15 @@
     "subtitle": {
       "type": "text"
     },
-    "list": {
-      "type": "component",
-      "repeatable": false,
-      "component": "core.list"
-    },
     "button": {
       "type": "component",
-      "repeatable": false,
+      "repeatable": true,
       "component": "core.button"
+    },
+    "list": {
+      "type": "component",
+      "repeatable": true,
+      "component": "core.highlight"
     }
   }
 }

@@ -1,7 +1,8 @@
 {
   "collectionName": "components_core_images",
   "info": {
-    "displayName": "Image"
+    "displayName": "Image",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -11,25 +12,7 @@
     "alt": {
       "type": "string"
     },
-    "aspectRatio": {
-      "type": "enumeration",
-      "enum": [
-        "square",
-        "video",
-        "wide",
-        "auto"
-      ]
-    },
-    "width": {
-      "type": "string"
-    },
-    "height": {
-      "type": "string"
-    },
     "svg": {
-      "type": "string"
-    },
-    "position": {
       "type": "string"
     }
   }

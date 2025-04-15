@@ -6,17 +6,6 @@
   },
   "options": {},
   "attributes": {
-    "variant": {
-      "type": "enumeration",
-      "enum": [
-        "default",
-        "outline",
-        "ghost",
-        "secondary",
-        "destructive",
-        "link"
-      ]
-    },
     "icon": {
       "type": "string"
     },

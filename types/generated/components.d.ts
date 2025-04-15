@@ -14,9 +14,6 @@ export interface CoreButton extends Struct.ComponentSchema {
     href: Schema.Attribute.String;
     icon: Schema.Attribute.String;
     label: Schema.Attribute.String;
-    variant: Schema.Attribute.Enumeration<
-      ['default', 'outline', 'ghost', 'secondary', 'destructive', 'link']
-    >;
   };
 }
 
@@ -79,43 +76,13 @@ export interface CoreHighlight extends Struct.ComponentSchema {
 export interface CoreImage extends Struct.ComponentSchema {
   collectionName: 'components_core_images';
   info: {
+    description: '';
     displayName: 'Image';
   };
   attributes: {
     alt: Schema.Attribute.String;
-    aspectRatio: Schema.Attribute.Enumeration<
-      ['square', 'video', 'wide', 'auto']
-    >;
-    height: Schema.Attribute.String;
-    position: Schema.Attribute.String;
     src: Schema.Attribute.String;
     svg: Schema.Attribute.String;
-    width: Schema.Attribute.String;
-  };
-}
-
-export interface CoreList extends Struct.ComponentSchema {
-  collectionName: 'components_core_lists';
-  info: {
-    displayName: 'List';
-  };
-  attributes: {
-    itemFour: Schema.Attribute.String;
-    itemOne: Schema.Attribute.String;
-    itemThree: Schema.Attribute.String;
-    itemTwo: Schema.Attribute.String;
-  };
-}
-
-export interface SharedBlock extends Struct.ComponentSchema {
-  collectionName: 'components_shared_blocks';
-  info: {
-    displayName: 'Block';
-  };
-  attributes: {
-    list: Schema.Attribute.Component<'core.list', false>;
-    subtitle: Schema.Attribute.Text;
-    title: Schema.Attribute.String;
   };
 }
 
@@ -126,9 +93,9 @@ export interface SharedCallout extends Struct.ComponentSchema {
     displayName: 'Callout';
   };
   attributes: {
-    button: Schema.Attribute.Component<'core.button', false>;
+    button: Schema.Attribute.Component<'core.button', true>;
     header: Schema.Attribute.Component<'core.header', false>;
-    list: Schema.Attribute.Component<'core.list', false>;
+    list: Schema.Attribute.Component<'core.highlight', true>;
     subtitle: Schema.Attribute.Text;
     title: Schema.Attribute.String;
   };
@@ -170,8 +137,6 @@ declare module '@strapi/strapi' {
       'core.header': CoreHeader;
       'core.highlight': CoreHighlight;
       'core.image': CoreImage;
-      'core.list': CoreList;
-      'shared.block': SharedBlock;
       'shared.callout': SharedCallout;
       'shared.hero': SharedHero;
       'shared.teck-stack': SharedTeckStack;
