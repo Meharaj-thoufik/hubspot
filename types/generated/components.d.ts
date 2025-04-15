@@ -35,14 +35,19 @@ export interface CoreCard extends Struct.ComponentSchema {
 export interface CoreContact extends Struct.ComponentSchema {
   collectionName: 'components_core_contacts';
   info: {
+    description: '';
     displayName: 'Contact';
   };
   attributes: {
     address: Schema.Attribute.String;
+    description: Schema.Attribute.String;
     emailHref: Schema.Attribute.String;
     emailLabel: Schema.Attribute.String;
+    label: Schema.Attribute.String;
     phoneHref: Schema.Attribute.String;
     phoneLabel: Schema.Attribute.String;
+    websiteHref: Schema.Attribute.String;
+    websiteLabel: Schema.Attribute.String;
   };
 }
 
