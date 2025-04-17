@@ -98,7 +98,7 @@ export interface SharedCallout extends Struct.ComponentSchema {
     displayName: 'Callout';
   };
   attributes: {
-    button: Schema.Attribute.Component<'core.button', true>;
+    buttons: Schema.Attribute.Component<'core.button', true>;
     header: Schema.Attribute.Component<'core.header', false>;
     list: Schema.Attribute.Component<'core.highlight', true>;
     subtitle: Schema.Attribute.Text;
@@ -113,7 +113,7 @@ export interface SharedHero extends Struct.ComponentSchema {
     displayName: 'Hero';
   };
   attributes: {
-    button: Schema.Attribute.Component<'core.button', true>;
+    buttons: Schema.Attribute.Component<'core.button', true>;
     description: Schema.Attribute.Text;
     heading: Schema.Attribute.Component<'core.header', false>;
     highlight: Schema.Attribute.Component<'core.highlight', true>;

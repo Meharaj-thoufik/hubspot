@@ -19,7 +19,7 @@
       "repeatable": true,
       "component": "core.highlight"
     },
-    "button": {
+    "buttons": {
       "type": "component",
       "repeatable": true,
       "component": "core.button"
