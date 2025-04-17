@@ -98,7 +98,7 @@ export interface SharedCallout extends Struct.ComponentSchema {
     displayName: 'Callout';
   };
   attributes: {
-    button: Schema.Attribute.Component<'core.button', true>;
+    buttons: Schema.Attribute.Component<'core.button', true>;
     header: Schema.Attribute.Component<'core.header', false>;
     list: Schema.Attribute.Component<'core.highlight', true>;
     subtitle: Schema.Attribute.Text;

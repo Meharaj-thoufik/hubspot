@@ -17,7 +17,7 @@
     "subtitle": {
       "type": "text"
     },
-    "button": {
+    "buttons": {
       "type": "component",
       "repeatable": true,
       "component": "core.button"
