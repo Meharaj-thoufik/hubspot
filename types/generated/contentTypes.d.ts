@@ -706,13 +706,8 @@ export interface ApiTrendTrend extends Struct.SingleTypeSchema {
         };
       }>;
     publishedAt: Schema.Attribute.DateTime;
-    trendFooter: Schema.Attribute.Component<'core.header', false> &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    trendHeader: Schema.Attribute.Component<'core.header', false> &
+    showAll: Schema.Attribute.Component<'core.button', false>;
+    trendingSection: Schema.Attribute.Component<'core.header', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;

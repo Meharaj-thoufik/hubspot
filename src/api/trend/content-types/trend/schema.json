@@ -26,17 +26,7 @@
         }
       }
     },
-    "trendHeader": {
-      "type": "component",
-      "repeatable": false,
-      "component": "core.header",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "trendFooter": {
+    "trendingSection": {
       "type": "component",
       "repeatable": false,
       "component": "core.header",
@@ -77,6 +67,11 @@
           "localized": true
         }
       }
+    },
+    "showAll": {
+      "type": "component",
+      "repeatable": false,
+      "component": "core.button"
     }
   }
 }

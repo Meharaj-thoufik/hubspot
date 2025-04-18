@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_core_test_components",
+  "info": {
+    "displayName": "Test Component",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "uglyFellow": {
+      "type": "string"
+    }
+  }
+}
