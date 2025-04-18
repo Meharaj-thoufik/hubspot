@@ -91,6 +91,17 @@ export interface CoreImage extends Struct.ComponentSchema {
   };
 }
 
+export interface CoreTestComponent extends Struct.ComponentSchema {
+  collectionName: 'components_core_test_components';
+  info: {
+    description: '';
+    displayName: 'Test Component';
+  };
+  attributes: {
+    uglyFellow: Schema.Attribute.String;
+  };
+}
+
 export interface SharedCallout extends Struct.ComponentSchema {
   collectionName: 'components_shared_callouts';
   info: {
@@ -142,6 +153,7 @@ declare module '@strapi/strapi' {
       'core.header': CoreHeader;
       'core.highlight': CoreHighlight;
       'core.image': CoreImage;
+      'core.test-component': CoreTestComponent;
       'shared.callout': SharedCallout;
       'shared.hero': SharedHero;
       'shared.teck-stack': SharedTeckStack;

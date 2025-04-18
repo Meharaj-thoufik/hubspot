@@ -1,0 +1,19 @@
+{
+  "kind": "singleType",
+  "collectionName": "text_single_pages",
+  "info": {
+    "singularName": "text-single-page",
+    "pluralName": "text-single-pages",
+    "displayName": "TextSinglePage"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "homeName": {
+      "type": "component",
+      "repeatable": true,
+      "component": "core.test-component"
+    }
+  }
+}

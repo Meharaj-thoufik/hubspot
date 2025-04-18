@@ -657,6 +657,35 @@ export interface ApiTermsAndConditionTermsAndCondition
   };
 }
 
+export interface ApiTextSinglePageTextSinglePage
+  extends Struct.SingleTypeSchema {
+  collectionName: 'text_single_pages';
+  info: {
+    displayName: 'TextSinglePage';
+    pluralName: 'text-single-pages';
+    singularName: 'text-single-page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    homeName: Schema.Attribute.Component<'core.test-component', true>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::text-single-page.text-single-page'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiTrendTrend extends Struct.SingleTypeSchema {
   collectionName: 'trends';
   info: {
@@ -1239,6 +1268,7 @@ declare module '@strapi/strapi' {
       'api::pricing.pricing': ApiPricingPricing;
       'api::privacy-policy.privacy-policy': ApiPrivacyPolicyPrivacyPolicy;
       'api::terms-and-condition.terms-and-condition': ApiTermsAndConditionTermsAndCondition;
+      'api::text-single-page.text-single-page': ApiTextSinglePageTextSinglePage;
       'api::trend.trend': ApiTrendTrend;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
