@@ -16,20 +16,17 @@
     }
   },
   "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
     "heroSection": {
       "type": "component",
       "repeatable": false,
       "component": "shared.hero",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
-    "problemSection": {
-      "type": "component",
-      "repeatable": false,
-      "component": "shared.callout",
       "pluginOptions": {
         "i18n": {
           "localized": true
