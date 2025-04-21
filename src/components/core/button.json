@@ -26,6 +26,17 @@
     },
     "href": {
       "type": "string"
+    },
+    "variant": {
+      "type": "enumeration",
+      "enum": [
+        "default",
+        "outline",
+        "ghost",
+        "secondary",
+        "destructive",
+        "ink"
+      ]
     }
   }
 }

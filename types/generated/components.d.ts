@@ -14,6 +14,9 @@ export interface CoreButton extends Struct.ComponentSchema {
     href: Schema.Attribute.String;
     icon: Schema.Attribute.String;
     label: Schema.Attribute.String;
+    variant: Schema.Attribute.Enumeration<
+      ['default', 'outline', 'ghost', 'secondary', 'destructive', 'ink']
+    >;
   };
 }
 
