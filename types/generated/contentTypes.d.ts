@@ -403,7 +403,7 @@ export interface ApiCareerCareer extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
-    heroSection: Schema.Attribute.Component<'shared.hero', true> &
+    heroSection: Schema.Attribute.Component<'shared.hero', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
