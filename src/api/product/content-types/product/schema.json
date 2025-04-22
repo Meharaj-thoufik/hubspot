@@ -32,6 +32,71 @@
           "localized": true
         }
       }
+    },
+    "ProblemsHeader": {
+      "type": "component",
+      "repeatable": false,
+      "component": "core.header"
+    },
+    "ProblemsSection": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.callout"
+    },
+    "SolutionsHeaderFooter": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.callout"
+    },
+    "SolutionsCard": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.callout"
+    },
+    "GuideSectionHeaderFooter": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.callout"
+    },
+    "GuideFeature": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.hero"
+    },
+    "SuccessStoryHeaderFooter": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.callout"
+    },
+    "SuccessStoryCard": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.card"
+    },
+    "SuccessStoryHighlight": {
+      "type": "component",
+      "repeatable": true,
+      "component": "core.highlight"
+    },
+    "PricingSectionHeaderFooter": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.callout"
+    },
+    "PricingHighlight": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.callout"
+    },
+    "CtaSectionHeader": {
+      "type": "component",
+      "repeatable": false,
+      "component": "core.header"
+    },
+    "CtaSection": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.callout"
     }
   }
 }
