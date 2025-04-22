@@ -597,9 +597,14 @@ export interface ApiIndustryIndustry extends Struct.CollectionTypeSchema {
     };
   };
   attributes: {
+    AllFeatureCard: Schema.Attribute.Component<'shared.card', true>;
+    AllFeatureHeader: Schema.Attribute.Component<'core.header', false>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    cta: Schema.Attribute.Component<'shared.callout', false>;
+    Feature: Schema.Attribute.Component<'shared.feature', true>;
+    FeaturesSectionHeader: Schema.Attribute.Component<'core.header', false>;
     heroSection: Schema.Attribute.Component<'shared.hero', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -625,6 +630,11 @@ export interface ApiIndustryIndustry extends Struct.CollectionTypeSchema {
       }>;
     publishedAt: Schema.Attribute.DateTime;
     slug: Schema.Attribute.UID<'name'>;
+    SuccessStoryCard: Schema.Attribute.Component<'shared.card', true>;
+    SuccessStoryHeaderFooter: Schema.Attribute.Component<
+      'shared.callout',
+      false
+    >;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

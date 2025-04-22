@@ -47,6 +47,41 @@
           "localized": true
         }
       }
+    },
+    "FeaturesSectionHeader": {
+      "type": "component",
+      "repeatable": false,
+      "component": "core.header"
+    },
+    "Feature": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.feature"
+    },
+    "AllFeatureHeader": {
+      "type": "component",
+      "repeatable": false,
+      "component": "core.header"
+    },
+    "AllFeatureCard": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.card"
+    },
+    "cta": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.callout"
+    },
+    "SuccessStoryHeaderFooter": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.callout"
+    },
+    "SuccessStoryCard": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.card"
     }
   }
 }
