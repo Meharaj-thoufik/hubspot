@@ -48,22 +48,22 @@
         }
       }
     },
-    "FeaturesSectionHeader": {
+    "featuresSectionHeader": {
       "type": "component",
       "repeatable": false,
       "component": "core.header"
     },
-    "Feature": {
+    "feature": {
       "type": "component",
       "repeatable": true,
       "component": "shared.feature"
     },
-    "AllFeatureHeader": {
+    "allFeatureHeader": {
       "type": "component",
       "repeatable": false,
       "component": "core.header"
     },
-    "AllFeatureCard": {
+    "allFeatureCard": {
       "type": "component",
       "repeatable": true,
       "component": "shared.card"
@@ -73,12 +73,12 @@
       "repeatable": false,
       "component": "shared.callout"
     },
-    "SuccessStoryHeaderFooter": {
+    "successStoryHeaderFooter": {
       "type": "component",
       "repeatable": false,
       "component": "shared.callout"
     },
-    "SuccessStoryCard": {
+    "successStoryCard": {
       "type": "component",
       "repeatable": true,
       "component": "shared.card"
