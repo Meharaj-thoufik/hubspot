@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_core_pricing_plans",
+  "info": {
+    "displayName": "PricingPlan"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "users": {
+      "type": "string"
+    },
+    "warranty": {
+      "type": "string"
+    },
+    "support": {
+      "type": "string"
+    },
+    "db": {
+      "type": "string"
+    },
+    "maintenance": {
+      "type": "string"
+    },
+    "consulting": {
+      "type": "string"
+    }
+  }
+}

@@ -79,14 +79,19 @@ export interface CoreImage extends Struct.ComponentSchema {
   };
 }
 
-export interface CoreTestComponent extends Struct.ComponentSchema {
-  collectionName: 'components_core_test_components';
+export interface CorePricingPlan extends Struct.ComponentSchema {
+  collectionName: 'components_core_pricing_plans';
   info: {
-    description: '';
-    displayName: 'Test Component';
+    displayName: 'PricingPlan';
   };
   attributes: {
-    uglyFellow: Schema.Attribute.String;
+    consulting: Schema.Attribute.String;
+    db: Schema.Attribute.String;
+    maintenance: Schema.Attribute.String;
+    name: Schema.Attribute.String;
+    support: Schema.Attribute.String;
+    users: Schema.Attribute.String;
+    warranty: Schema.Attribute.String;
   };
 }
 
@@ -171,7 +176,7 @@ declare module '@strapi/strapi' {
       'core.header': CoreHeader;
       'core.highlight': CoreHighlight;
       'core.image': CoreImage;
-      'core.test-component': CoreTestComponent;
+      'core.pricing-plan': CorePricingPlan;
       'shared.callout': SharedCallout;
       'shared.card': SharedCard;
       'shared.feature': SharedFeature;
