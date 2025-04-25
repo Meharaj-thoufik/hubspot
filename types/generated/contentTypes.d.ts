@@ -424,6 +424,12 @@ export interface ApiCareerCareer extends Struct.SingleTypeSchema {
         };
       }>;
     publishedAt: Schema.Attribute.DateTime;
+    trendingFooter: Schema.Attribute.Component<'core.button', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     trendingSection: Schema.Attribute.Component<'core.header', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -597,9 +603,14 @@ export interface ApiIndustryIndustry extends Struct.CollectionTypeSchema {
     };
   };
   attributes: {
+    allFeatureCard: Schema.Attribute.Component<'shared.card', true>;
+    allFeatureHeader: Schema.Attribute.Component<'core.header', false>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    cta: Schema.Attribute.Component<'shared.callout', false>;
+    feature: Schema.Attribute.Component<'shared.feature', true>;
+    featuresSectionHeader: Schema.Attribute.Component<'core.header', false>;
     heroSection: Schema.Attribute.Component<'shared.hero', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -625,6 +636,11 @@ export interface ApiIndustryIndustry extends Struct.CollectionTypeSchema {
       }>;
     publishedAt: Schema.Attribute.DateTime;
     slug: Schema.Attribute.UID<'name'>;
+    successStoryCard: Schema.Attribute.Component<'shared.card', true>;
+    successStoryHeaderFooter: Schema.Attribute.Component<
+      'shared.callout',
+      false
+    >;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -722,9 +738,7 @@ export interface ApiPricingPricing extends Struct.SingleTypeSchema {
       'oneToMany',
       'api::pricing.pricing'
     >;
-    problemSection: Schema.Attribute.DynamicZone<
-      ['core.header', 'core.highlight', 'shared.callout']
-    > &
+    problemSection: Schema.Attribute.Component<'shared.callout', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -807,6 +821,13 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    ctaSection: Schema.Attribute.Component<'shared.callout', false>;
+    ctaSectionHeader: Schema.Attribute.Component<'core.header', false>;
+    guideFeature: Schema.Attribute.Component<'shared.hero', true>;
+    guideSectionHeaderFooter: Schema.Attribute.Component<
+      'shared.callout',
+      false
+    >;
     heroSection: Schema.Attribute.Component<'shared.hero', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -819,8 +840,23 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
       'api::product.product'
     >;
     name: Schema.Attribute.String;
+    pricingHighlight: Schema.Attribute.Component<'shared.callout', false>;
+    pricingSectionHeaderFooter: Schema.Attribute.Component<
+      'shared.callout',
+      false
+    >;
+    problemsHeader: Schema.Attribute.Component<'core.header', false>;
+    problemsSection: Schema.Attribute.Component<'shared.callout', false>;
     publishedAt: Schema.Attribute.DateTime;
     slug: Schema.Attribute.UID<'name'>;
+    solutionsCard: Schema.Attribute.Component<'shared.callout', true>;
+    solutionsHeaderFooter: Schema.Attribute.Component<'shared.callout', false>;
+    successStoryCard: Schema.Attribute.Component<'shared.card', true>;
+    successStoryHeaderFooter: Schema.Attribute.Component<
+      'shared.callout',
+      false
+    >;
+    successStoryHighlight: Schema.Attribute.Component<'core.highlight', true>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

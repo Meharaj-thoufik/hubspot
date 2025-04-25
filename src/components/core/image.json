@@ -6,10 +6,10 @@
   },
   "options": {},
   "attributes": {
-    "src": {
+    "source": {
       "type": "string"
     },
-    "alt": {
+    "alternate": {
       "type": "string"
     },
     "svg": {

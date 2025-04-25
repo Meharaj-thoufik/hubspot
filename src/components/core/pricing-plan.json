@@ -1,26 +1,29 @@
 {
-  "collectionName": "components_core_cards",
+  "collectionName": "components_core_pricing_plans",
   "info": {
-    "displayName": "Card"
+    "displayName": "PricingPlan"
   },
   "options": {},
   "attributes": {
-    "headline": {
+    "name": {
       "type": "string"
     },
-    "summary": {
+    "users": {
       "type": "string"
     },
-    "sourceName": {
+    "warranty": {
       "type": "string"
     },
-    "imageUrl": {
+    "support": {
       "type": "string"
     },
-    "authorName": {
+    "db": {
       "type": "string"
     },
-    "publishedDate": {
+    "maintenance": {
+      "type": "string"
+    },
+    "consulting": {
       "type": "string"
     }
   }

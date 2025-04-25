@@ -32,6 +32,71 @@
           "localized": true
         }
       }
+    },
+    "problemsHeader": {
+      "type": "component",
+      "repeatable": false,
+      "component": "core.header"
+    },
+    "problemsSection": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.callout"
+    },
+    "solutionsHeaderFooter": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.callout"
+    },
+    "solutionsCard": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.callout"
+    },
+    "guideSectionHeaderFooter": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.callout"
+    },
+    "guideFeature": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.hero"
+    },
+    "successStoryHeaderFooter": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.callout"
+    },
+    "successStoryCard": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.card"
+    },
+    "successStoryHighlight": {
+      "type": "component",
+      "repeatable": true,
+      "component": "core.highlight"
+    },
+    "pricingSectionHeaderFooter": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.callout"
+    },
+    "pricingHighlight": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.callout"
+    },
+    "ctaSectionHeader": {
+      "type": "component",
+      "repeatable": false,
+      "component": "core.header"
+    },
+    "ctaSection": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.callout"
     }
   }
 }

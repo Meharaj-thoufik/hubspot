@@ -20,21 +20,6 @@ export interface CoreButton extends Struct.ComponentSchema {
   };
 }
 
-export interface CoreCard extends Struct.ComponentSchema {
-  collectionName: 'components_core_cards';
-  info: {
-    displayName: 'Card';
-  };
-  attributes: {
-    authorName: Schema.Attribute.String;
-    headline: Schema.Attribute.String;
-    imageUrl: Schema.Attribute.String;
-    publishedDate: Schema.Attribute.String;
-    sourceName: Schema.Attribute.String;
-    summary: Schema.Attribute.String;
-  };
-}
-
 export interface CoreContact extends Struct.ComponentSchema {
   collectionName: 'components_core_contacts';
   info: {
@@ -88,20 +73,25 @@ export interface CoreImage extends Struct.ComponentSchema {
     displayName: 'Image';
   };
   attributes: {
-    alt: Schema.Attribute.String;
-    src: Schema.Attribute.String;
+    alternate: Schema.Attribute.String;
+    source: Schema.Attribute.String;
     svg: Schema.Attribute.String;
   };
 }
 
-export interface CoreTestComponent extends Struct.ComponentSchema {
-  collectionName: 'components_core_test_components';
+export interface CorePricingPlan extends Struct.ComponentSchema {
+  collectionName: 'components_core_pricing_plans';
   info: {
-    description: '';
-    displayName: 'Test Component';
+    displayName: 'PricingPlan';
   };
   attributes: {
-    uglyFellow: Schema.Attribute.String;
+    consulting: Schema.Attribute.String;
+    db: Schema.Attribute.String;
+    maintenance: Schema.Attribute.String;
+    name: Schema.Attribute.String;
+    support: Schema.Attribute.String;
+    users: Schema.Attribute.String;
+    warranty: Schema.Attribute.String;
   };
 }
 
@@ -117,6 +107,37 @@ export interface SharedCallout extends Struct.ComponentSchema {
     list: Schema.Attribute.Component<'core.highlight', true>;
     subtitle: Schema.Attribute.Text;
     title: Schema.Attribute.String;
+  };
+}
+
+export interface SharedCard extends Struct.ComponentSchema {
+  collectionName: 'components_shared_cards';
+  info: {
+    displayName: 'Card';
+    icon: 'apps';
+  };
+  attributes: {
+    avatar: Schema.Attribute.Component<'core.image', false>;
+    avatarDetails: Schema.Attribute.Component<'core.highlight', false>;
+    buttons: Schema.Attribute.Component<'core.button', false>;
+    category: Schema.Attribute.String;
+    header: Schema.Attribute.Component<'core.header', false>;
+    image: Schema.Attribute.Component<'core.image', false>;
+    link: Schema.Attribute.Component<'core.button', false>;
+    list: Schema.Attribute.Component<'core.highlight', true>;
+    tag: Schema.Attribute.String;
+  };
+}
+
+export interface SharedFeature extends Struct.ComponentSchema {
+  collectionName: 'components_shared_features';
+  info: {
+    displayName: 'Feature';
+  };
+  attributes: {
+    card: Schema.Attribute.Component<'shared.card', false>;
+    header: Schema.Attribute.Component<'core.header', false>;
+    image: Schema.Attribute.Component<'core.image', false>;
   };
 }
 
@@ -151,13 +172,14 @@ declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
       'core.button': CoreButton;
-      'core.card': CoreCard;
       'core.contact': CoreContact;
       'core.header': CoreHeader;
       'core.highlight': CoreHighlight;
       'core.image': CoreImage;
-      'core.test-component': CoreTestComponent;
+      'core.pricing-plan': CorePricingPlan;
       'shared.callout': SharedCallout;
+      'shared.card': SharedCard;
+      'shared.feature': SharedFeature;
       'shared.hero': SharedHero;
       'shared.teck-stack': SharedTeckStack;
     }

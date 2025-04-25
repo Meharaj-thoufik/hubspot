@@ -22,12 +22,9 @@
       "component": "shared.hero"
     },
     "problemSection": {
-      "type": "dynamiczone",
-      "components": [
-        "core.header",
-        "core.highlight",
-        "shared.callout"
-      ],
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.callout",
       "pluginOptions": {
         "i18n": {
           "localized": true
