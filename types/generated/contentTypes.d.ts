@@ -424,6 +424,12 @@ export interface ApiCareerCareer extends Struct.SingleTypeSchema {
         };
       }>;
     publishedAt: Schema.Attribute.DateTime;
+    trendingFooter: Schema.Attribute.Component<'core.button', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     trendingSection: Schema.Attribute.Component<'core.header', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -732,9 +738,7 @@ export interface ApiPricingPricing extends Struct.SingleTypeSchema {
       'oneToMany',
       'api::pricing.pricing'
     >;
-    problemSection: Schema.Attribute.DynamicZone<
-      ['core.header', 'core.highlight', 'shared.callout']
-    > &
+    problemSection: Schema.Attribute.Component<'shared.callout', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;

@@ -73,8 +73,8 @@ export interface CoreImage extends Struct.ComponentSchema {
     displayName: 'Image';
   };
   attributes: {
-    alt: Schema.Attribute.String;
-    src: Schema.Attribute.String;
+    alternate: Schema.Attribute.String;
+    source: Schema.Attribute.String;
     svg: Schema.Attribute.String;
   };
 }
