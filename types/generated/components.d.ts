@@ -113,17 +113,18 @@ export interface SharedCallout extends Struct.ComponentSchema {
 export interface SharedCard extends Struct.ComponentSchema {
   collectionName: 'components_shared_cards';
   info: {
+    description: '';
     displayName: 'Card';
     icon: 'apps';
   };
   attributes: {
     avatar: Schema.Attribute.Component<'core.image', false>;
     avatarDetails: Schema.Attribute.Component<'core.highlight', false>;
-    buttons: Schema.Attribute.Component<'core.button', false>;
+    buttons: Schema.Attribute.Component<'core.button', true>;
     category: Schema.Attribute.String;
     header: Schema.Attribute.Component<'core.header', false>;
     image: Schema.Attribute.Component<'core.image', false>;
-    link: Schema.Attribute.Component<'core.button', false>;
+    link: Schema.Attribute.Component<'core.button', true>;
     list: Schema.Attribute.Component<'core.highlight', true>;
     tag: Schema.Attribute.String;
   };
