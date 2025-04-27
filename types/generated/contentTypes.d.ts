@@ -734,7 +734,12 @@ export interface ApiPricingPricing extends Struct.SingleTypeSchema {
       Schema.Attribute.Private;
     ctaSection: Schema.Attribute.Component<'shared.hero', false>;
     faqSection: Schema.Attribute.Component<'shared.teck-stack', false>;
-    guideSection: Schema.Attribute.Component<'shared.hero', false>;
+    finalSection: Schema.Attribute.DynamicZone<
+      ['core.header', 'shared.callout']
+    >;
+    guideSection: Schema.Attribute.DynamicZone<
+      ['core.highlight', 'core.header', 'shared.teck-stack']
+    >;
     heroSection: Schema.Attribute.Component<'shared.hero', false>;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<
@@ -751,7 +756,9 @@ export interface ApiPricingPricing extends Struct.SingleTypeSchema {
         };
       }>;
     publishedAt: Schema.Attribute.DateTime;
-    testimonialSection: Schema.Attribute.Component<'shared.feature', false>;
+    testimonialSection: Schema.Attribute.DynamicZone<
+      ['core.header', 'shared.feature']
+    >;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

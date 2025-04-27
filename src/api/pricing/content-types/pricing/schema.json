@@ -38,11 +38,6 @@
         "shared.callout"
       ]
     },
-    "testimonialSection": {
-      "type": "component",
-      "repeatable": false,
-      "component": "shared.feature"
-    },
     "faqSection": {
       "type": "component",
       "repeatable": false,
@@ -53,10 +48,27 @@
       "repeatable": false,
       "component": "shared.hero"
     },
+    "testimonialSection": {
+      "type": "dynamiczone",
+      "components": [
+        "core.header",
+        "shared.feature"
+      ]
+    },
     "guideSection": {
-      "type": "component",
-      "repeatable": false,
-      "component": "shared.hero"
+      "type": "dynamiczone",
+      "components": [
+        "core.highlight",
+        "core.header",
+        "shared.teck-stack"
+      ]
+    },
+    "finalSection": {
+      "type": "dynamiczone",
+      "components": [
+        "core.header",
+        "shared.callout"
+      ]
     }
   }
 }
