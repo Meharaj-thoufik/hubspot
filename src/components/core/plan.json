@@ -1,7 +1,8 @@
 {
-  "collectionName": "components_core_pricing_plans",
+  "collectionName": "components_core_plans",
   "info": {
-    "displayName": "PricingPlan"
+    "displayName": "Plan",
+    "icon": ""
   },
   "options": {},
   "attributes": {

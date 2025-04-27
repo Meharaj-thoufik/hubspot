@@ -4,7 +4,8 @@
   "info": {
     "singularName": "home",
     "pluralName": "homes",
-    "displayName": "Home"
+    "displayName": "Home",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -19,6 +20,28 @@
       "type": "component",
       "repeatable": false,
       "component": "shared.hero"
+    },
+    "problemSection": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.hero"
+    },
+    "calloutSection": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.callout"
+    },
+    "faqSection": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.callout"
+    },
+    "socialSection": {
+      "type": "dynamiczone",
+      "components": [
+        "core.header",
+        "shared.callout"
+      ]
     }
   }
 }

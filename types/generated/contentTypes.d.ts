@@ -560,6 +560,7 @@ export interface ApiFooterFooter extends Struct.SingleTypeSchema {
 export interface ApiHomeHome extends Struct.SingleTypeSchema {
   collectionName: 'homes';
   info: {
+    description: '';
     displayName: 'Home';
     pluralName: 'homes';
     singularName: 'home';
@@ -573,13 +574,19 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
     };
   };
   attributes: {
+    calloutSection: Schema.Attribute.Component<'shared.callout', false>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    faqSection: Schema.Attribute.Component<'shared.callout', false>;
     heroSection: Schema.Attribute.Component<'shared.hero', false>;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::home.home'>;
+    problemSection: Schema.Attribute.Component<'shared.hero', false>;
     publishedAt: Schema.Attribute.DateTime;
+    socialSection: Schema.Attribute.DynamicZone<
+      ['core.header', 'shared.callout']
+    >;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -628,12 +635,9 @@ export interface ApiIndustryIndustry extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
-    problemSection: Schema.Attribute.Component<'shared.callout', false> &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
+    problemSection: Schema.Attribute.DynamicZone<
+      ['core.header', 'shared.callout']
+    >;
     publishedAt: Schema.Attribute.DateTime;
     slug: Schema.Attribute.UID<'name'>;
     successStoryCard: Schema.Attribute.Component<'shared.card', true>;
@@ -732,11 +736,19 @@ export interface ApiPricingPricing extends Struct.SingleTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    ctaSection: Schema.Attribute.DynamicZone<['core.header', 'shared.callout']>;
+    faqSection: Schema.Attribute.DynamicZone<['core.header', 'core.highlight']>;
+    guideSection: Schema.Attribute.DynamicZone<
+      ['core.header', 'core.button', 'core.highlight']
+    >;
     heroSection: Schema.Attribute.Component<'shared.hero', false>;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::pricing.pricing'
+    >;
+    planSection: Schema.Attribute.DynamicZone<
+      ['shared.plan-feature', 'shared.callout']
     >;
     problemSection: Schema.Attribute.Component<'shared.callout', false> &
       Schema.Attribute.SetPluginOptions<{
@@ -745,6 +757,9 @@ export interface ApiPricingPricing extends Struct.SingleTypeSchema {
         };
       }>;
     publishedAt: Schema.Attribute.DateTime;
+    testimonialSection: Schema.Attribute.DynamicZone<
+      ['core.header', 'shared.card']
+    >;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
