@@ -37,11 +37,9 @@
       "component": "shared.callout"
     },
     "socialSection": {
-      "type": "dynamiczone",
-      "components": [
-        "core.header",
-        "shared.callout"
-      ]
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.hero"
     }
   }
 }

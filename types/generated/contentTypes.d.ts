@@ -584,9 +584,7 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::home.home'>;
     problemSection: Schema.Attribute.Component<'shared.hero', false>;
     publishedAt: Schema.Attribute.DateTime;
-    socialSection: Schema.Attribute.DynamicZone<
-      ['core.header', 'shared.callout']
-    >;
+    socialSection: Schema.Attribute.Component<'shared.hero', false>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -635,9 +633,7 @@ export interface ApiIndustryIndustry extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
-    problemSection: Schema.Attribute.DynamicZone<
-      ['core.header', 'shared.callout']
-    >;
+    problemSection: Schema.Attribute.Component<'shared.callout', false>;
     publishedAt: Schema.Attribute.DateTime;
     slug: Schema.Attribute.UID<'name'>;
     successStoryCard: Schema.Attribute.Component<'shared.card', true>;
@@ -736,11 +732,9 @@ export interface ApiPricingPricing extends Struct.SingleTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    ctaSection: Schema.Attribute.DynamicZone<['core.header', 'shared.callout']>;
-    faqSection: Schema.Attribute.DynamicZone<['core.header', 'core.highlight']>;
-    guideSection: Schema.Attribute.DynamicZone<
-      ['core.header', 'core.button', 'core.highlight']
-    >;
+    ctaSection: Schema.Attribute.Component<'shared.hero', false>;
+    faqSection: Schema.Attribute.Component<'shared.teck-stack', false>;
+    guideSection: Schema.Attribute.Component<'shared.hero', false>;
     heroSection: Schema.Attribute.Component<'shared.hero', false>;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<
@@ -757,9 +751,7 @@ export interface ApiPricingPricing extends Struct.SingleTypeSchema {
         };
       }>;
     publishedAt: Schema.Attribute.DateTime;
-    testimonialSection: Schema.Attribute.DynamicZone<
-      ['core.header', 'shared.card']
-    >;
+    testimonialSection: Schema.Attribute.Component<'shared.feature', false>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
