@@ -74,11 +74,9 @@
       "component": "shared.card"
     },
     "problemSection": {
-      "type": "dynamiczone",
-      "components": [
-        "core.header",
-        "shared.callout"
-      ]
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.callout"
     }
   }
 }

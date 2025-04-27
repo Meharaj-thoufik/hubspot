@@ -39,33 +39,24 @@
       ]
     },
     "testimonialSection": {
-      "type": "dynamiczone",
-      "components": [
-        "core.header",
-        "shared.card"
-      ]
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.feature"
     },
     "faqSection": {
-      "type": "dynamiczone",
-      "components": [
-        "core.header",
-        "core.highlight"
-      ]
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.teck-stack"
     },
     "ctaSection": {
-      "type": "dynamiczone",
-      "components": [
-        "core.header",
-        "shared.callout"
-      ]
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.hero"
     },
     "guideSection": {
-      "type": "dynamiczone",
-      "components": [
-        "core.header",
-        "core.button",
-        "core.highlight"
-      ]
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.hero"
     }
   }
 }
