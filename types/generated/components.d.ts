@@ -79,10 +79,11 @@ export interface CoreImage extends Struct.ComponentSchema {
   };
 }
 
-export interface CorePricingPlan extends Struct.ComponentSchema {
-  collectionName: 'components_core_pricing_plans';
+export interface CorePlan extends Struct.ComponentSchema {
+  collectionName: 'components_core_plans';
   info: {
-    displayName: 'PricingPlan';
+    displayName: 'Plan';
+    icon: '';
   };
   attributes: {
     consulting: Schema.Attribute.String;
@@ -157,6 +158,19 @@ export interface SharedHero extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedPlanFeature extends Struct.ComponentSchema {
+  collectionName: 'components_shared_plan_features';
+  info: {
+    description: '';
+    displayName: 'PlanFeature';
+  };
+  attributes: {
+    features: Schema.Attribute.Component<'core.highlight', true>;
+    pricingPlans: Schema.Attribute.Component<'core.plan', true>;
+    tableHead: Schema.Attribute.String;
+  };
+}
+
 export interface SharedTeckStack extends Struct.ComponentSchema {
   collectionName: 'components_shared_teck_stacks';
   info: {
@@ -177,11 +191,12 @@ declare module '@strapi/strapi' {
       'core.header': CoreHeader;
       'core.highlight': CoreHighlight;
       'core.image': CoreImage;
-      'core.pricing-plan': CorePricingPlan;
+      'core.plan': CorePlan;
       'shared.callout': SharedCallout;
       'shared.card': SharedCard;
       'shared.feature': SharedFeature;
       'shared.hero': SharedHero;
+      'shared.plan-feature': SharedPlanFeature;
       'shared.teck-stack': SharedTeckStack;
     }
   }

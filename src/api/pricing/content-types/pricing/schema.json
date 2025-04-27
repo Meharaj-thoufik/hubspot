@@ -30,6 +30,42 @@
           "localized": true
         }
       }
+    },
+    "planSection": {
+      "type": "dynamiczone",
+      "components": [
+        "shared.plan-feature",
+        "shared.callout"
+      ]
+    },
+    "testimonialSection": {
+      "type": "dynamiczone",
+      "components": [
+        "core.header",
+        "shared.card"
+      ]
+    },
+    "faqSection": {
+      "type": "dynamiczone",
+      "components": [
+        "core.header",
+        "core.highlight"
+      ]
+    },
+    "ctaSection": {
+      "type": "dynamiczone",
+      "components": [
+        "core.header",
+        "shared.callout"
+      ]
+    },
+    "guideSection": {
+      "type": "dynamiczone",
+      "components": [
+        "core.header",
+        "core.button",
+        "core.highlight"
+      ]
     }
   }
 }
