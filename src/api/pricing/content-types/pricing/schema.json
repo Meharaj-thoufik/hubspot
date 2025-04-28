@@ -31,13 +31,6 @@
         }
       }
     },
-    "planSection": {
-      "type": "dynamiczone",
-      "components": [
-        "shared.plan-feature",
-        "shared.callout"
-      ]
-    },
     "faqSection": {
       "type": "component",
       "repeatable": false,
@@ -48,27 +41,60 @@
       "repeatable": false,
       "component": "shared.hero"
     },
-    "testimonialSection": {
-      "type": "dynamiczone",
-      "components": [
-        "core.header",
-        "shared.feature"
-      ]
+    "testimonialHeader": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.callout"
+    },
+    "planHeader": {
+      "type": "component",
+      "repeatable": false,
+      "component": "core.header"
+    },
+    "planFooter": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.callout"
+    },
+    "guideHeader": {
+      "type": "component",
+      "repeatable": false,
+      "component": "core.header"
+    },
+    "guideCategories": {
+      "type": "component",
+      "repeatable": true,
+      "component": "core.highlight"
+    },
+    "guideTableHeader": {
+      "type": "component",
+      "repeatable": true,
+      "component": "core.highlight"
     },
     "guideSection": {
-      "type": "dynamiczone",
-      "components": [
-        "core.highlight",
-        "core.header",
-        "shared.teck-stack"
-      ]
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.teck-stack"
     },
-    "finalSection": {
-      "type": "dynamiczone",
-      "components": [
-        "core.header",
-        "shared.callout"
-      ]
+    "guideFooter": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.callout"
+    },
+    "planSection": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.plan-feature"
+    },
+    "testimonialSection": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.card"
+    },
+    "guideCallout": {
+      "type": "component",
+      "repeatable": false,
+      "component": "core.header"
     }
   }
 }

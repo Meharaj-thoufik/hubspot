@@ -23,12 +23,12 @@
     },
     "problemSection": {
       "type": "component",
-      "repeatable": false,
+      "repeatable": true,
       "component": "shared.hero"
     },
     "calloutSection": {
       "type": "component",
-      "repeatable": false,
+      "repeatable": true,
       "component": "shared.callout"
     },
     "faqSection": {
