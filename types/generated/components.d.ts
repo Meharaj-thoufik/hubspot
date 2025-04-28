@@ -134,9 +134,11 @@ export interface SharedCard extends Struct.ComponentSchema {
 export interface SharedFeature extends Struct.ComponentSchema {
   collectionName: 'components_shared_features';
   info: {
+    description: '';
     displayName: 'Feature';
   };
   attributes: {
+    button: Schema.Attribute.Component<'core.button', true>;
     card: Schema.Attribute.Component<'shared.card', false>;
     header: Schema.Attribute.Component<'core.header', false>;
     image: Schema.Attribute.Component<'core.image', false>;

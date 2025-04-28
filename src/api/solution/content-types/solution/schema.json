@@ -4,7 +4,8 @@
   "info": {
     "singularName": "solution",
     "pluralName": "solutions",
-    "displayName": "Solution"
+    "displayName": "Solution",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -19,6 +20,61 @@
       "type": "component",
       "repeatable": false,
       "component": "shared.hero"
+    },
+    "problemSection": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.callout"
+    },
+    "guideHeader": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.feature"
+    },
+    "guideFooter": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.callout"
+    },
+    "planHeader": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.feature"
+    },
+    "planFooter": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.callout"
+    },
+    "solutionHeader": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.feature"
+    },
+    "solutionFooter": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.callout"
+    },
+    "storySection": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.feature"
+    },
+    "calloutSection": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.feature"
+    },
+    "successHeader": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.feature"
+    },
+    "successFooter": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.callout"
     }
   }
 }

@@ -574,7 +574,7 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
     };
   };
   attributes: {
-    calloutSection: Schema.Attribute.Component<'shared.callout', false>;
+    calloutSection: Schema.Attribute.Component<'shared.callout', true>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -582,7 +582,7 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
     heroSection: Schema.Attribute.Component<'shared.hero', false>;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::home.home'>;
-    problemSection: Schema.Attribute.Component<'shared.hero', false>;
+    problemSection: Schema.Attribute.Component<'shared.hero', true>;
     publishedAt: Schema.Attribute.DateTime;
     socialSection: Schema.Attribute.Component<'shared.hero', false>;
     updatedAt: Schema.Attribute.DateTime;
@@ -734,21 +734,21 @@ export interface ApiPricingPricing extends Struct.SingleTypeSchema {
       Schema.Attribute.Private;
     ctaSection: Schema.Attribute.Component<'shared.hero', false>;
     faqSection: Schema.Attribute.Component<'shared.teck-stack', false>;
-    finalSection: Schema.Attribute.DynamicZone<
-      ['core.header', 'shared.callout']
-    >;
-    guideSection: Schema.Attribute.DynamicZone<
-      ['core.highlight', 'core.header', 'shared.teck-stack']
-    >;
+    guideCallout: Schema.Attribute.Component<'core.header', false>;
+    guideCategories: Schema.Attribute.Component<'core.highlight', true>;
+    guideFooter: Schema.Attribute.Component<'shared.callout', false>;
+    guideHeader: Schema.Attribute.Component<'core.header', false>;
+    guideSection: Schema.Attribute.Component<'shared.teck-stack', true>;
+    guideTableHeader: Schema.Attribute.Component<'core.highlight', true>;
     heroSection: Schema.Attribute.Component<'shared.hero', false>;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::pricing.pricing'
     >;
-    planSection: Schema.Attribute.DynamicZone<
-      ['shared.plan-feature', 'shared.callout']
-    >;
+    planFooter: Schema.Attribute.Component<'shared.callout', false>;
+    planHeader: Schema.Attribute.Component<'core.header', false>;
+    planSection: Schema.Attribute.Component<'shared.plan-feature', true>;
     problemSection: Schema.Attribute.Component<'shared.callout', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -756,9 +756,8 @@ export interface ApiPricingPricing extends Struct.SingleTypeSchema {
         };
       }>;
     publishedAt: Schema.Attribute.DateTime;
-    testimonialSection: Schema.Attribute.DynamicZone<
-      ['core.header', 'shared.feature']
-    >;
+    testimonialHeader: Schema.Attribute.Component<'shared.callout', false>;
+    testimonialSection: Schema.Attribute.Component<'shared.card', true>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -880,6 +879,7 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
 export interface ApiSolutionSolution extends Struct.SingleTypeSchema {
   collectionName: 'solutions';
   info: {
+    description: '';
     displayName: 'Solution';
     pluralName: 'solutions';
     singularName: 'solution';
@@ -893,16 +893,27 @@ export interface ApiSolutionSolution extends Struct.SingleTypeSchema {
     };
   };
   attributes: {
+    calloutSection: Schema.Attribute.Component<'shared.feature', false>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    guideFooter: Schema.Attribute.Component<'shared.callout', false>;
+    guideHeader: Schema.Attribute.Component<'shared.feature', false>;
     heroSection: Schema.Attribute.Component<'shared.hero', false>;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::solution.solution'
     >;
+    planFooter: Schema.Attribute.Component<'shared.callout', false>;
+    planHeader: Schema.Attribute.Component<'shared.feature', false>;
+    problemSection: Schema.Attribute.Component<'shared.callout', false>;
     publishedAt: Schema.Attribute.DateTime;
+    solutionFooter: Schema.Attribute.Component<'shared.callout', false>;
+    solutionHeader: Schema.Attribute.Component<'shared.feature', false>;
+    storySection: Schema.Attribute.Component<'shared.feature', false>;
+    successFooter: Schema.Attribute.Component<'shared.callout', false>;
+    successHeader: Schema.Attribute.Component<'shared.feature', false>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
