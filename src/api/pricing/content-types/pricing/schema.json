@@ -71,11 +71,6 @@
       "repeatable": true,
       "component": "core.highlight"
     },
-    "guideSection": {
-      "type": "component",
-      "repeatable": true,
-      "component": "shared.teck-stack"
-    },
     "guideFooter": {
       "type": "component",
       "repeatable": false,
@@ -83,7 +78,7 @@
     },
     "planSection": {
       "type": "component",
-      "repeatable": true,
+      "repeatable": false,
       "component": "shared.plan-feature"
     },
     "testimonialSection": {
@@ -94,6 +89,11 @@
     "guideCallout": {
       "type": "component",
       "repeatable": false,
+      "component": "core.header"
+    },
+    "guideSection": {
+      "type": "component",
+      "repeatable": true,
       "component": "core.header"
     }
   }

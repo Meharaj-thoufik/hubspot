@@ -21,25 +21,30 @@
       "repeatable": false,
       "component": "shared.hero"
     },
-    "problemSection": {
-      "type": "component",
-      "repeatable": false,
-      "component": "shared.callout"
-    },
     "guideHeader": {
       "type": "component",
       "repeatable": false,
-      "component": "shared.feature"
+      "component": "core.header"
     },
     "guideFooter": {
       "type": "component",
       "repeatable": false,
       "component": "shared.callout"
     },
+    "guideSection": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.card"
+    },
     "planHeader": {
       "type": "component",
       "repeatable": false,
-      "component": "shared.feature"
+      "component": "core.header"
+    },
+    "planSection": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.card"
     },
     "planFooter": {
       "type": "component",
@@ -49,29 +54,64 @@
     "solutionHeader": {
       "type": "component",
       "repeatable": false,
-      "component": "shared.feature"
+      "component": "core.header"
     },
     "solutionFooter": {
       "type": "component",
       "repeatable": false,
       "component": "shared.callout"
     },
-    "storySection": {
+    "solutionSection": {
       "type": "component",
-      "repeatable": false,
-      "component": "shared.feature"
-    },
-    "calloutSection": {
-      "type": "component",
-      "repeatable": false,
-      "component": "shared.feature"
+      "repeatable": true,
+      "component": "shared.card"
     },
     "successHeader": {
       "type": "component",
       "repeatable": false,
-      "component": "shared.feature"
+      "component": "core.header"
+    },
+    "successSection": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.card"
     },
     "successFooter": {
+      "type": "component",
+      "repeatable": false,
+      "component": "core.button"
+    },
+    "storyHeader": {
+      "type": "component",
+      "repeatable": false,
+      "component": "core.header"
+    },
+    "storySection": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.card"
+    },
+    "storyFooter": {
+      "type": "component",
+      "repeatable": false,
+      "component": "core.button"
+    },
+    "calloutHeader": {
+      "type": "component",
+      "repeatable": false,
+      "component": "core.header"
+    },
+    "calloutFooter": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.callout"
+    },
+    "calloutCard": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.card"
+    },
+    "calloutSection": {
       "type": "component",
       "repeatable": false,
       "component": "shared.callout"
