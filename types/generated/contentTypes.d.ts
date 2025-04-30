@@ -738,7 +738,7 @@ export interface ApiPricingPricing extends Struct.SingleTypeSchema {
     guideCategories: Schema.Attribute.Component<'core.highlight', true>;
     guideFooter: Schema.Attribute.Component<'shared.callout', false>;
     guideHeader: Schema.Attribute.Component<'core.header', false>;
-    guideSection: Schema.Attribute.Component<'shared.teck-stack', true>;
+    guideSection: Schema.Attribute.Component<'core.header', true>;
     guideTableHeader: Schema.Attribute.Component<'core.highlight', true>;
     heroSection: Schema.Attribute.Component<'shared.hero', false>;
     locale: Schema.Attribute.String;
@@ -748,7 +748,7 @@ export interface ApiPricingPricing extends Struct.SingleTypeSchema {
     >;
     planFooter: Schema.Attribute.Component<'shared.callout', false>;
     planHeader: Schema.Attribute.Component<'core.header', false>;
-    planSection: Schema.Attribute.Component<'shared.plan-feature', true>;
+    planSection: Schema.Attribute.Component<'shared.plan-feature', false>;
     problemSection: Schema.Attribute.Component<'shared.callout', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -893,12 +893,16 @@ export interface ApiSolutionSolution extends Struct.SingleTypeSchema {
     };
   };
   attributes: {
-    calloutSection: Schema.Attribute.Component<'shared.feature', false>;
+    calloutCard: Schema.Attribute.Component<'shared.card', true>;
+    calloutFooter: Schema.Attribute.Component<'shared.callout', false>;
+    calloutHeader: Schema.Attribute.Component<'core.header', false>;
+    calloutSection: Schema.Attribute.Component<'shared.callout', false>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     guideFooter: Schema.Attribute.Component<'shared.callout', false>;
-    guideHeader: Schema.Attribute.Component<'shared.feature', false>;
+    guideHeader: Schema.Attribute.Component<'core.header', false>;
+    guideSection: Schema.Attribute.Component<'shared.card', true>;
     heroSection: Schema.Attribute.Component<'shared.hero', false>;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<
@@ -906,14 +910,18 @@ export interface ApiSolutionSolution extends Struct.SingleTypeSchema {
       'api::solution.solution'
     >;
     planFooter: Schema.Attribute.Component<'shared.callout', false>;
-    planHeader: Schema.Attribute.Component<'shared.feature', false>;
-    problemSection: Schema.Attribute.Component<'shared.callout', false>;
+    planHeader: Schema.Attribute.Component<'core.header', false>;
+    planSection: Schema.Attribute.Component<'shared.card', true>;
     publishedAt: Schema.Attribute.DateTime;
     solutionFooter: Schema.Attribute.Component<'shared.callout', false>;
-    solutionHeader: Schema.Attribute.Component<'shared.feature', false>;
-    storySection: Schema.Attribute.Component<'shared.feature', false>;
-    successFooter: Schema.Attribute.Component<'shared.callout', false>;
-    successHeader: Schema.Attribute.Component<'shared.feature', false>;
+    solutionHeader: Schema.Attribute.Component<'core.header', false>;
+    solutionSection: Schema.Attribute.Component<'shared.card', true>;
+    storyFooter: Schema.Attribute.Component<'core.button', false>;
+    storyHeader: Schema.Attribute.Component<'core.header', false>;
+    storySection: Schema.Attribute.Component<'shared.card', true>;
+    successFooter: Schema.Attribute.Component<'core.button', false>;
+    successHeader: Schema.Attribute.Component<'core.header', false>;
+    successSection: Schema.Attribute.Component<'shared.card', true>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
