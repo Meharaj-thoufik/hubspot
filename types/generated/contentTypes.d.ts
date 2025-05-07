@@ -909,6 +909,7 @@ export interface ApiSolutionSolution extends Struct.SingleTypeSchema {
       'oneToMany',
       'api::solution.solution'
     >;
+    planCard: Schema.Attribute.Component<'shared.card', true>;
     planFooter: Schema.Attribute.Component<'shared.callout', false>;
     planHeader: Schema.Attribute.Component<'core.header', false>;
     planSection: Schema.Attribute.Component<'shared.card', true>;
