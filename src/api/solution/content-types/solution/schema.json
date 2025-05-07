@@ -115,6 +115,11 @@
       "type": "component",
       "repeatable": false,
       "component": "shared.callout"
+    },
+    "planCard": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.card"
     }
   }
 }
