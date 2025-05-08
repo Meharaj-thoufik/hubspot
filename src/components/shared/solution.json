@@ -1,7 +1,8 @@
 {
   "collectionName": "components_shared_solutions",
   "info": {
-    "displayName": "Solution"
+    "displayName": "Solution",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -32,6 +33,11 @@
       "type": "component",
       "repeatable": false,
       "component": "shared.hero"
+    },
+    "testimonial": {
+      "type": "component",
+      "repeatable": false,
+      "component": "core.testimonial"
     }
   }
 }

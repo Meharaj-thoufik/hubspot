@@ -96,6 +96,19 @@ export interface CorePlan extends Struct.ComponentSchema {
   };
 }
 
+export interface CoreTestimonial extends Struct.ComponentSchema {
+  collectionName: 'components_core_testimonials';
+  info: {
+    displayName: 'Testimonial';
+  };
+  attributes: {
+    author: Schema.Attribute.String;
+    quote: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+    verify: Schema.Attribute.String;
+  };
+}
+
 export interface SharedCallout extends Struct.ComponentSchema {
   collectionName: 'components_shared_callouts';
   info: {
@@ -176,6 +189,7 @@ export interface SharedPlanFeature extends Struct.ComponentSchema {
 export interface SharedSolution extends Struct.ComponentSchema {
   collectionName: 'components_shared_solutions';
   info: {
+    description: '';
     displayName: 'Solution';
   };
   attributes: {
@@ -184,6 +198,7 @@ export interface SharedSolution extends Struct.ComponentSchema {
     header: Schema.Attribute.Component<'core.header', false>;
     products: Schema.Attribute.Component<'core.highlight', true>;
     results: Schema.Attribute.Component<'core.header', true>;
+    testimonial: Schema.Attribute.Component<'core.testimonial', false>;
     title: Schema.Attribute.String;
   };
 }
@@ -209,6 +224,7 @@ declare module '@strapi/strapi' {
       'core.highlight': CoreHighlight;
       'core.image': CoreImage;
       'core.plan': CorePlan;
+      'core.testimonial': CoreTestimonial;
       'shared.callout': SharedCallout;
       'shared.card': SharedCard;
       'shared.feature': SharedFeature;

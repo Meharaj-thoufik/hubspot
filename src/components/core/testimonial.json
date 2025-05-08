@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_core_testimonials",
+  "info": {
+    "displayName": "Testimonial"
+  },
+  "options": {},
+  "attributes": {
+    "quote": {
+      "type": "string"
+    },
+    "author": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "verify": {
+      "type": "string"
+    }
+  }
+}
