@@ -173,6 +173,21 @@ export interface SharedPlanFeature extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedSolution extends Struct.ComponentSchema {
+  collectionName: 'components_shared_solutions';
+  info: {
+    displayName: 'Solution';
+  };
+  attributes: {
+    details: Schema.Attribute.Component<'core.highlight', true>;
+    footer: Schema.Attribute.Component<'shared.hero', false>;
+    header: Schema.Attribute.Component<'core.header', false>;
+    products: Schema.Attribute.Component<'core.highlight', true>;
+    results: Schema.Attribute.Component<'core.header', true>;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface SharedTeckStack extends Struct.ComponentSchema {
   collectionName: 'components_shared_teck_stacks';
   info: {
@@ -199,6 +214,7 @@ declare module '@strapi/strapi' {
       'shared.feature': SharedFeature;
       'shared.hero': SharedHero;
       'shared.plan-feature': SharedPlanFeature;
+      'shared.solution': SharedSolution;
       'shared.teck-stack': SharedTeckStack;
     }
   }

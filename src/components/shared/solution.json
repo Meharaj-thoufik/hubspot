@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_shared_solutions",
+  "info": {
+    "displayName": "Solution"
+  },
+  "options": {},
+  "attributes": {
+    "header": {
+      "type": "component",
+      "repeatable": false,
+      "component": "core.header"
+    },
+    "products": {
+      "type": "component",
+      "repeatable": true,
+      "component": "core.highlight"
+    },
+    "details": {
+      "type": "component",
+      "repeatable": true,
+      "component": "core.highlight"
+    },
+    "title": {
+      "type": "string"
+    },
+    "results": {
+      "type": "component",
+      "repeatable": true,
+      "component": "core.header"
+    },
+    "footer": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.hero"
+    }
+  }
+}

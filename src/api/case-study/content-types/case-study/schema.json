@@ -26,7 +26,33 @@
     "heroSection": {
       "type": "component",
       "repeatable": false,
-      "component": "shared.hero"
+      "component": "shared.card"
+    },
+    "problemSection": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.callout"
+    },
+    "solutionSection": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.solution"
+    },
+    "sidebarData": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.card"
+    },
+    "relatedCaseStudies": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.card"
+    },
+    "industries": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::industry.industry",
+      "mappedBy": "case_study"
     }
   }
 }
