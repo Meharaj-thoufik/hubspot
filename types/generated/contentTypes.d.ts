@@ -462,15 +462,23 @@ export interface ApiCaseStudyCaseStudy extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    heroSection: Schema.Attribute.Component<'shared.hero', false>;
+    heroSection: Schema.Attribute.Component<'shared.card', false>;
+    industries: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::industry.industry'
+    >;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::case-study.case-study'
     >;
     name: Schema.Attribute.String;
+    problemSection: Schema.Attribute.Component<'shared.callout', false>;
     publishedAt: Schema.Attribute.DateTime;
+    relatedCaseStudies: Schema.Attribute.Component<'shared.card', true>;
+    sidebarData: Schema.Attribute.Component<'shared.card', true>;
     slug: Schema.Attribute.UID<'name'>;
+    solutionSection: Schema.Attribute.Component<'shared.solution', false>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -610,6 +618,10 @@ export interface ApiIndustryIndustry extends Struct.CollectionTypeSchema {
   attributes: {
     allFeatureCard: Schema.Attribute.Component<'shared.card', true>;
     allFeatureHeader: Schema.Attribute.Component<'core.header', false>;
+    case_study: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::case-study.case-study'
+    >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
