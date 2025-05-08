@@ -47,12 +47,6 @@
       "type": "component",
       "repeatable": true,
       "component": "shared.card"
-    },
-    "industries": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::industry.industry",
-      "mappedBy": "case_study"
     }
   }
 }

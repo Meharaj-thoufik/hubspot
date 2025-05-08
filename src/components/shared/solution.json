@@ -6,11 +6,6 @@
   },
   "options": {},
   "attributes": {
-    "header": {
-      "type": "component",
-      "repeatable": false,
-      "component": "core.header"
-    },
     "products": {
       "type": "component",
       "repeatable": true,
@@ -38,6 +33,11 @@
       "type": "component",
       "repeatable": false,
       "component": "core.testimonial"
+    },
+    "successCard": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.card"
     }
   }
 }
