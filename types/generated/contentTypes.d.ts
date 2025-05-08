@@ -463,10 +463,6 @@ export interface ApiCaseStudyCaseStudy extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     heroSection: Schema.Attribute.Component<'shared.card', false>;
-    industries: Schema.Attribute.Relation<
-      'oneToMany',
-      'api::industry.industry'
-    >;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -618,10 +614,6 @@ export interface ApiIndustryIndustry extends Struct.CollectionTypeSchema {
   attributes: {
     allFeatureCard: Schema.Attribute.Component<'shared.card', true>;
     allFeatureHeader: Schema.Attribute.Component<'core.header', false>;
-    case_study: Schema.Attribute.Relation<
-      'manyToOne',
-      'api::case-study.case-study'
-    >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
