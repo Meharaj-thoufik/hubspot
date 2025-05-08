@@ -197,7 +197,7 @@ export interface SharedSolution extends Struct.ComponentSchema {
     footer: Schema.Attribute.Component<'shared.hero', false>;
     products: Schema.Attribute.Component<'core.highlight', true>;
     results: Schema.Attribute.Component<'core.header', true>;
-    successCard: Schema.Attribute.Component<'shared.card', true>;
+    successCard: Schema.Attribute.Component<'shared.card', false>;
     testimonial: Schema.Attribute.Component<'core.testimonial', false>;
     title: Schema.Attribute.String;
   };

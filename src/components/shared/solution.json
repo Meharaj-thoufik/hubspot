@@ -36,7 +36,7 @@
     },
     "successCard": {
       "type": "component",
-      "repeatable": true,
+      "repeatable": false,
       "component": "shared.card"
     }
   }
