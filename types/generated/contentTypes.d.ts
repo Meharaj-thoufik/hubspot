@@ -756,17 +756,60 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
     };
   };
   attributes: {
-    calloutSection: Schema.Attribute.Component<'shared.callout', true>;
+    calloutSection: Schema.Attribute.Component<'shared.callout', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    faqSection: Schema.Attribute.Component<'shared.callout', false>;
-    heroSection: Schema.Attribute.Component<'shared.hero', false>;
+    faqSection: Schema.Attribute.Component<'shared.callout', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    heroSection: Schema.Attribute.Component<'shared.hero', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::home.home'>;
-    problemSection: Schema.Attribute.Component<'shared.hero', true>;
+    problemSection: Schema.Attribute.Component<'shared.hero', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     publishedAt: Schema.Attribute.DateTime;
-    socialSection: Schema.Attribute.Component<'shared.hero', false>;
+    socialSection: Schema.Attribute.Component<'shared.hero', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    successClients: Schema.Attribute.Component<'core.image', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    testimonials: Schema.Attribute.Component<'shared.card', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    trendingNowSection: Schema.Attribute.Component<'shared.callout', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
