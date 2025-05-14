@@ -570,6 +570,12 @@ export interface ApiCaseStudyCaseStudy extends Struct.CollectionTypeSchema {
       'api::case-study.case-study'
     >;
     name: Schema.Attribute.String;
+    pdfName: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     problemSection: Schema.Attribute.Component<'shared.callout', false>;
     publishedAt: Schema.Attribute.DateTime;
     relatedCaseStudies: Schema.Attribute.Component<'shared.card', true>;
