@@ -67,6 +67,14 @@
           "localized": true
         }
       }
+    },
+    "pdfName": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }
