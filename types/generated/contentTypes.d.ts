@@ -548,9 +548,21 @@ export interface ApiCaseStudyCaseStudy extends Struct.CollectionTypeSchema {
     };
   };
   attributes: {
+    conclusion: Schema.Attribute.Component<'core.header', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    ctaSection: Schema.Attribute.Component<'shared.callout', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     heroSection: Schema.Attribute.Component<'shared.card', false>;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<
@@ -573,6 +585,7 @@ export interface ApiCaseStudyCaseStudy extends Struct.CollectionTypeSchema {
 export interface ApiContactContact extends Struct.SingleTypeSchema {
   collectionName: 'contacts';
   info: {
+    description: '';
     displayName: 'Contact';
     pluralName: 'contacts';
     singularName: 'contact';
@@ -589,7 +602,12 @@ export interface ApiContactContact extends Struct.SingleTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    header: Schema.Attribute.Component<'core.header', true>;
+    header: Schema.Attribute.Component<'core.header', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -667,18 +685,48 @@ export interface ApiFooterFooter extends Struct.SingleTypeSchema {
         };
       }> &
       Schema.Attribute.DefaultTo<'LMNAs'>;
-    contact: Schema.Attribute.Component<'core.contact', false>;
+    contact: Schema.Attribute.Component<'core.contact', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::footer.footer'>;
-    menu: Schema.Attribute.Component<'core.highlight', true>;
-    more: Schema.Attribute.Component<'core.button', true>;
-    policies: Schema.Attribute.Component<'core.button', true>;
-    product: Schema.Attribute.Component<'core.button', true>;
+    menu: Schema.Attribute.Component<'core.highlight', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    more: Schema.Attribute.Component<'core.button', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    policies: Schema.Attribute.Component<'core.button', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    product: Schema.Attribute.Component<'core.button', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     publishedAt: Schema.Attribute.DateTime;
-    social: Schema.Attribute.Component<'core.button', true>;
+    social: Schema.Attribute.Component<'core.button', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -736,14 +784,39 @@ export interface ApiIndustryIndustry extends Struct.CollectionTypeSchema {
     };
   };
   attributes: {
-    allFeatureCard: Schema.Attribute.Component<'shared.card', true>;
-    allFeatureHeader: Schema.Attribute.Component<'core.header', false>;
+    allFeatureCard: Schema.Attribute.Component<'shared.card', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    allFeatureHeader: Schema.Attribute.Component<'core.header', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    cta: Schema.Attribute.Component<'shared.callout', false>;
-    feature: Schema.Attribute.Component<'shared.feature', true>;
-    featuresSectionHeader: Schema.Attribute.Component<'core.header', false>;
+    cta: Schema.Attribute.Component<'shared.callout', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    feature: Schema.Attribute.Component<'shared.feature', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    featuresSectionHeader: Schema.Attribute.Component<'core.header', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     heroSection: Schema.Attribute.Component<'shared.hero', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -761,14 +834,29 @@ export interface ApiIndustryIndustry extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
-    problemSection: Schema.Attribute.Component<'shared.callout', false>;
+    problemSection: Schema.Attribute.Component<'shared.callout', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     publishedAt: Schema.Attribute.DateTime;
     slug: Schema.Attribute.UID<'name'>;
-    successStoryCard: Schema.Attribute.Component<'shared.card', true>;
+    successStoryCard: Schema.Attribute.Component<'shared.card', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     successStoryHeaderFooter: Schema.Attribute.Component<
       'shared.callout',
       false
-    >;
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -860,23 +948,83 @@ export interface ApiPricingPricing extends Struct.SingleTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    ctaSection: Schema.Attribute.Component<'shared.hero', false>;
-    faqSection: Schema.Attribute.Component<'shared.teck-stack', false>;
-    guideCallout: Schema.Attribute.Component<'core.header', false>;
-    guideCategories: Schema.Attribute.Component<'core.highlight', true>;
-    guideFooter: Schema.Attribute.Component<'shared.callout', false>;
-    guideHeader: Schema.Attribute.Component<'core.header', false>;
-    guideSection: Schema.Attribute.Component<'core.header', true>;
-    guideTableHeader: Schema.Attribute.Component<'core.highlight', true>;
-    heroSection: Schema.Attribute.Component<'shared.hero', false>;
+    ctaSection: Schema.Attribute.Component<'shared.hero', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    faqSection: Schema.Attribute.Component<'shared.teck-stack', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    guideCallout: Schema.Attribute.Component<'core.header', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    guideCategories: Schema.Attribute.Component<'core.highlight', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    guideFooter: Schema.Attribute.Component<'shared.callout', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    guideHeader: Schema.Attribute.Component<'core.header', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    guideSection: Schema.Attribute.Component<'core.header', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    guideTableHeader: Schema.Attribute.Component<'core.highlight', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    heroSection: Schema.Attribute.Component<'shared.hero', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::pricing.pricing'
     >;
-    planFooter: Schema.Attribute.Component<'shared.callout', false>;
-    planHeader: Schema.Attribute.Component<'core.header', false>;
-    planSection: Schema.Attribute.Component<'shared.plan-feature', false>;
+    planFooter: Schema.Attribute.Component<'shared.callout', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    planHeader: Schema.Attribute.Component<'core.header', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    planSection: Schema.Attribute.Component<'shared.plan-feature', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     problemSection: Schema.Attribute.Component<'shared.callout', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -884,8 +1032,18 @@ export interface ApiPricingPricing extends Struct.SingleTypeSchema {
         };
       }>;
     publishedAt: Schema.Attribute.DateTime;
-    testimonialHeader: Schema.Attribute.Component<'shared.callout', false>;
-    testimonialSection: Schema.Attribute.Component<'shared.card', true>;
+    testimonialHeader: Schema.Attribute.Component<'shared.callout', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    testimonialSection: Schema.Attribute.Component<'shared.card', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -895,6 +1053,7 @@ export interface ApiPricingPricing extends Struct.SingleTypeSchema {
 export interface ApiPrivacyPolicyPrivacyPolicy extends Struct.SingleTypeSchema {
   collectionName: 'privacy_policies';
   info: {
+    description: '';
     displayName: 'Privacy Policy';
     pluralName: 'privacy-policies';
     singularName: 'privacy-policy';
@@ -923,7 +1082,12 @@ export interface ApiPrivacyPolicyPrivacyPolicy extends Struct.SingleTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    faq: Schema.Attribute.Component<'shared.teck-stack', false>;
+    faq: Schema.Attribute.Component<'shared.teck-stack', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     header: Schema.Attribute.Component<'core.header', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -962,13 +1126,33 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    ctaSection: Schema.Attribute.Component<'shared.callout', false>;
-    ctaSectionHeader: Schema.Attribute.Component<'core.header', false>;
-    guideFeature: Schema.Attribute.Component<'shared.hero', true>;
+    ctaSection: Schema.Attribute.Component<'shared.callout', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    ctaSectionHeader: Schema.Attribute.Component<'core.header', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    guideFeature: Schema.Attribute.Component<'shared.hero', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     guideSectionHeaderFooter: Schema.Attribute.Component<
       'shared.callout',
       false
-    >;
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     heroSection: Schema.Attribute.Component<'shared.hero', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -981,23 +1165,68 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
       'api::product.product'
     >;
     name: Schema.Attribute.String;
-    pricingHighlight: Schema.Attribute.Component<'shared.callout', false>;
+    pricingHighlight: Schema.Attribute.Component<'shared.callout', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     pricingSectionHeaderFooter: Schema.Attribute.Component<
       'shared.callout',
       false
-    >;
-    problemsHeader: Schema.Attribute.Component<'core.header', false>;
-    problemsSection: Schema.Attribute.Component<'shared.callout', false>;
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    problemsHeader: Schema.Attribute.Component<'core.header', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    problemsSection: Schema.Attribute.Component<'shared.callout', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     publishedAt: Schema.Attribute.DateTime;
     slug: Schema.Attribute.UID<'name'>;
-    solutionsCard: Schema.Attribute.Component<'shared.callout', true>;
-    solutionsHeaderFooter: Schema.Attribute.Component<'shared.callout', false>;
-    successStoryCard: Schema.Attribute.Component<'shared.card', true>;
+    solutionsCard: Schema.Attribute.Component<'shared.callout', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    solutionsHeaderFooter: Schema.Attribute.Component<'shared.callout', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    successStoryCard: Schema.Attribute.Component<'shared.card', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     successStoryHeaderFooter: Schema.Attribute.Component<
       'shared.callout',
       false
-    >;
-    successStoryHighlight: Schema.Attribute.Component<'core.highlight', true>;
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    successStoryHighlight: Schema.Attribute.Component<'core.highlight', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1021,36 +1250,141 @@ export interface ApiSolutionSolution extends Struct.SingleTypeSchema {
     };
   };
   attributes: {
-    calloutCard: Schema.Attribute.Component<'shared.card', true>;
-    calloutFooter: Schema.Attribute.Component<'shared.callout', false>;
-    calloutHeader: Schema.Attribute.Component<'core.header', false>;
-    calloutSection: Schema.Attribute.Component<'shared.callout', false>;
+    calloutCard: Schema.Attribute.Component<'shared.card', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    calloutFooter: Schema.Attribute.Component<'shared.callout', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    calloutHeader: Schema.Attribute.Component<'core.header', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    calloutSection: Schema.Attribute.Component<'shared.callout', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    guideFooter: Schema.Attribute.Component<'shared.callout', false>;
-    guideHeader: Schema.Attribute.Component<'core.header', false>;
-    guideSection: Schema.Attribute.Component<'shared.card', true>;
-    heroSection: Schema.Attribute.Component<'shared.hero', false>;
+    guideFooter: Schema.Attribute.Component<'shared.callout', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    guideHeader: Schema.Attribute.Component<'core.header', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    guideSection: Schema.Attribute.Component<'shared.card', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    heroSection: Schema.Attribute.Component<'shared.hero', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::solution.solution'
     >;
-    planCard: Schema.Attribute.Component<'shared.card', true>;
-    planFooter: Schema.Attribute.Component<'shared.callout', false>;
-    planHeader: Schema.Attribute.Component<'core.header', false>;
-    planSection: Schema.Attribute.Component<'shared.card', true>;
+    planCard: Schema.Attribute.Component<'shared.card', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    planFooter: Schema.Attribute.Component<'shared.callout', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    planHeader: Schema.Attribute.Component<'core.header', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    planSection: Schema.Attribute.Component<'shared.card', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     publishedAt: Schema.Attribute.DateTime;
-    solutionFooter: Schema.Attribute.Component<'shared.callout', false>;
-    solutionHeader: Schema.Attribute.Component<'core.header', false>;
-    solutionSection: Schema.Attribute.Component<'shared.card', true>;
-    storyFooter: Schema.Attribute.Component<'core.button', false>;
-    storyHeader: Schema.Attribute.Component<'core.header', false>;
-    storySection: Schema.Attribute.Component<'shared.card', true>;
-    successFooter: Schema.Attribute.Component<'core.button', false>;
-    successHeader: Schema.Attribute.Component<'core.header', false>;
-    successSection: Schema.Attribute.Component<'shared.card', true>;
+    solutionFooter: Schema.Attribute.Component<'shared.callout', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    solutionHeader: Schema.Attribute.Component<'core.header', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    solutionSection: Schema.Attribute.Component<'shared.card', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    storyFooter: Schema.Attribute.Component<'core.button', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    storyHeader: Schema.Attribute.Component<'core.header', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    storySection: Schema.Attribute.Component<'shared.card', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    successFooter: Schema.Attribute.Component<'core.button', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    successHeader: Schema.Attribute.Component<'core.header', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    successSection: Schema.Attribute.Component<'shared.card', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1096,7 +1430,12 @@ export interface ApiTermsAndConditionTermsAndCondition
           localized: true;
         };
       }>;
-    header: Schema.Attribute.Component<'core.header', false>;
+    header: Schema.Attribute.Component<'core.header', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -1158,7 +1497,12 @@ export interface ApiTrendTrend extends Struct.SingleTypeSchema {
         };
       }>;
     publishedAt: Schema.Attribute.DateTime;
-    showAll: Schema.Attribute.Component<'core.button', false>;
+    showAll: Schema.Attribute.Component<'core.button', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     trendingSection: Schema.Attribute.Component<'core.header', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {

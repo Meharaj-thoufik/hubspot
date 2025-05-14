@@ -47,6 +47,26 @@
       "type": "component",
       "repeatable": true,
       "component": "shared.card"
+    },
+    "ctaSection": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.callout",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "conclusion": {
+      "type": "component",
+      "repeatable": false,
+      "component": "core.header",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }

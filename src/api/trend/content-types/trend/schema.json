@@ -71,7 +71,12 @@
     "showAll": {
       "type": "component",
       "repeatable": false,
-      "component": "core.button"
+      "component": "core.button",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }

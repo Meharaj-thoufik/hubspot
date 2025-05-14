@@ -36,67 +36,132 @@
     "problemsHeader": {
       "type": "component",
       "repeatable": false,
-      "component": "core.header"
+      "component": "core.header",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "problemsSection": {
       "type": "component",
       "repeatable": false,
-      "component": "shared.callout"
+      "component": "shared.callout",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "solutionsHeaderFooter": {
       "type": "component",
       "repeatable": false,
-      "component": "shared.callout"
+      "component": "shared.callout",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "solutionsCard": {
       "type": "component",
       "repeatable": true,
-      "component": "shared.callout"
+      "component": "shared.callout",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "guideSectionHeaderFooter": {
       "type": "component",
       "repeatable": false,
-      "component": "shared.callout"
+      "component": "shared.callout",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "guideFeature": {
       "type": "component",
       "repeatable": true,
-      "component": "shared.hero"
+      "component": "shared.hero",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "successStoryHeaderFooter": {
       "type": "component",
       "repeatable": false,
-      "component": "shared.callout"
+      "component": "shared.callout",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "successStoryCard": {
       "type": "component",
       "repeatable": true,
-      "component": "shared.card"
+      "component": "shared.card",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "successStoryHighlight": {
       "type": "component",
       "repeatable": true,
-      "component": "core.highlight"
+      "component": "core.highlight",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "pricingSectionHeaderFooter": {
       "type": "component",
       "repeatable": false,
-      "component": "shared.callout"
+      "component": "shared.callout",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "pricingHighlight": {
       "type": "component",
       "repeatable": false,
-      "component": "shared.callout"
+      "component": "shared.callout",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "ctaSectionHeader": {
       "type": "component",
       "repeatable": false,
-      "component": "core.header"
+      "component": "core.header",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "ctaSection": {
       "type": "component",
       "repeatable": false,
-      "component": "shared.callout"
+      "component": "shared.callout",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }
