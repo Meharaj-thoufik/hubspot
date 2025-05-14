@@ -41,42 +41,82 @@
     "featuresSectionHeader": {
       "type": "component",
       "repeatable": false,
-      "component": "core.header"
+      "component": "core.header",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "feature": {
       "type": "component",
       "repeatable": true,
-      "component": "shared.feature"
+      "component": "shared.feature",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "allFeatureHeader": {
       "type": "component",
       "repeatable": false,
-      "component": "core.header"
+      "component": "core.header",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "allFeatureCard": {
       "type": "component",
       "repeatable": true,
-      "component": "shared.card"
+      "component": "shared.card",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "cta": {
       "type": "component",
       "repeatable": false,
-      "component": "shared.callout"
+      "component": "shared.callout",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "successStoryHeaderFooter": {
       "type": "component",
       "repeatable": false,
-      "component": "shared.callout"
+      "component": "shared.callout",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "successStoryCard": {
       "type": "component",
       "repeatable": true,
-      "component": "shared.card"
+      "component": "shared.card",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "problemSection": {
       "type": "component",
       "repeatable": false,
-      "component": "shared.callout"
+      "component": "shared.callout",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }

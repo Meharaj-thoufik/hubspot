@@ -4,7 +4,8 @@
   "info": {
     "singularName": "privacy-policy",
     "pluralName": "privacy-policies",
-    "displayName": "Privacy Policy"
+    "displayName": "Privacy Policy",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -36,7 +37,12 @@
     "faq": {
       "type": "component",
       "repeatable": false,
-      "component": "shared.teck-stack"
+      "component": "shared.teck-stack",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "contact": {
       "type": "component",
