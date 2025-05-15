@@ -10,7 +10,7 @@
       "type": "string"
     },
     "label": {
-      "type": "string"
+      "type": "text"
     },
     "description": {
       "type": "text"

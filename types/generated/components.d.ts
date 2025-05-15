@@ -62,7 +62,7 @@ export interface CoreHighlight extends Struct.ComponentSchema {
   attributes: {
     description: Schema.Attribute.Text;
     icon: Schema.Attribute.String;
-    label: Schema.Attribute.String;
+    label: Schema.Attribute.Text;
   };
 }
 
