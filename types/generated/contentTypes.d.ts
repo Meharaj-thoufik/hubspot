@@ -605,6 +605,18 @@ export interface ApiContactContact extends Struct.SingleTypeSchema {
     };
   };
   attributes: {
+    bookingForm: Schema.Attribute.Component<'core.form-field', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    contactForm: Schema.Attribute.Component<'core.form-field', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -774,8 +786,18 @@ export interface ApiFormForm extends Struct.CollectionTypeSchema {
     formId: Schema.Attribute.UID;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::form.form'>;
-    policyDescription: Schema.Attribute.Text;
-    privacy: Schema.Attribute.Component<'core.button', false>;
+    policyDescription: Schema.Attribute.Text &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    privacy: Schema.Attribute.Component<'core.button', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     publishedAt: Schema.Attribute.DateTime;
     showTerms: Schema.Attribute.Boolean;
     submitText: Schema.Attribute.String &
@@ -796,18 +818,33 @@ export interface ApiFormForm extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
-    terms: Schema.Attribute.Component<'core.button', false>;
+    terms: Schema.Attribute.Component<'core.button', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     title: Schema.Attribute.Text &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }>;
-    unVerifiedMessage: Schema.Attribute.Component<'core.highlight', false>;
+    unVerifiedMessage: Schema.Attribute.Component<'core.highlight', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    verifiedMessage: Schema.Attribute.Component<'core.highlight', false>;
+    verifiedMessage: Schema.Attribute.Component<'core.highlight', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
   };
 }
 

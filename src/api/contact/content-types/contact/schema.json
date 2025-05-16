@@ -25,6 +25,26 @@
           "localized": true
         }
       }
+    },
+    "contactForm": {
+      "type": "component",
+      "repeatable": true,
+      "component": "core.form-field",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "bookingForm": {
+      "type": "component",
+      "repeatable": true,
+      "component": "core.form-field",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }
