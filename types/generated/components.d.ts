@@ -39,6 +39,52 @@ export interface CoreContact extends Struct.ComponentSchema {
   };
 }
 
+export interface CoreFormField extends Struct.ComponentSchema {
+  collectionName: 'components_core_form_fields';
+  info: {
+    description: '';
+    displayName: 'FormField';
+  };
+  attributes: {
+    className: Schema.Attribute.Text;
+    defaultValue: Schema.Attribute.String;
+    errorMessage: Schema.Attribute.Text;
+    loading: Schema.Attribute.Component<'core.highlight', false>;
+    name: Schema.Attribute.Enumeration<
+      [
+        'name',
+        'date',
+        'email',
+        'phone',
+        'timezone',
+        'timeSlot',
+        'message',
+        'newsletter',
+        'enquiryType',
+        'company',
+        'job',
+      ]
+    >;
+    options: Schema.Attribute.Component<'core.options', true>;
+    placeholder: Schema.Attribute.Text;
+    required: Schema.Attribute.Boolean;
+    type: Schema.Attribute.Enumeration<
+      [
+        'date',
+        'timezone',
+        'timeslot',
+        'text',
+        'phone',
+        'email',
+        'textarea',
+        'checkbox',
+        'select',
+      ]
+    >;
+    validationMessage: Schema.Attribute.Text;
+  };
+}
+
 export interface CoreHeader extends Struct.ComponentSchema {
   collectionName: 'components_core_headers';
   info: {
@@ -76,6 +122,17 @@ export interface CoreImage extends Struct.ComponentSchema {
     alternate: Schema.Attribute.String;
     source: Schema.Attribute.String;
     svg: Schema.Attribute.String;
+  };
+}
+
+export interface CoreOptions extends Struct.ComponentSchema {
+  collectionName: 'components_core_options';
+  info: {
+    displayName: 'Options';
+  };
+  attributes: {
+    label: Schema.Attribute.String;
+    value: Schema.Attribute.String;
   };
 }
 
@@ -220,9 +277,11 @@ declare module '@strapi/strapi' {
     export interface ComponentSchemas {
       'core.button': CoreButton;
       'core.contact': CoreContact;
+      'core.form-field': CoreFormField;
       'core.header': CoreHeader;
       'core.highlight': CoreHighlight;
       'core.image': CoreImage;
+      'core.options': CoreOptions;
       'core.plan': CorePlan;
       'core.testimonial': CoreTestimonial;
       'shared.callout': SharedCallout;

@@ -1,0 +1,99 @@
+{
+  "kind": "collectionType",
+  "collectionName": "forms",
+  "info": {
+    "singularName": "form",
+    "pluralName": "forms",
+    "displayName": "Form",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "formId": {
+      "type": "uid"
+    },
+    "title": {
+      "type": "text",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "description": {
+      "type": "text",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "submitText": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "successTitle": {
+      "type": "text",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "successMessage": {
+      "type": "text",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "showTerms": {
+      "type": "boolean"
+    },
+    "fields": {
+      "type": "component",
+      "repeatable": true,
+      "component": "core.form-field",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "verifiedMessage": {
+      "type": "component",
+      "repeatable": false,
+      "component": "core.highlight"
+    },
+    "unVerifiedMessage": {
+      "type": "component",
+      "repeatable": false,
+      "component": "core.highlight"
+    },
+    "terms": {
+      "type": "component",
+      "repeatable": false,
+      "component": "core.button"
+    },
+    "privacy": {
+      "type": "component",
+      "repeatable": false,
+      "component": "core.button"
+    },
+    "policyDescription": {
+      "type": "text"
+    }
+  }
+}
