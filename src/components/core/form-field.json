@@ -1,0 +1,68 @@
+{
+  "collectionName": "components_core_form_fields",
+  "info": {
+    "displayName": "FormField",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "date",
+        "timezone",
+        "timeslot",
+        "text",
+        "phone",
+        "email",
+        "textarea",
+        "checkbox",
+        "select"
+      ]
+    },
+    "placeholder": {
+      "type": "text"
+    },
+    "required": {
+      "type": "boolean"
+    },
+    "className": {
+      "type": "text"
+    },
+    "errorMessage": {
+      "type": "text"
+    },
+    "name": {
+      "type": "enumeration",
+      "enum": [
+        "name",
+        "date",
+        "email",
+        "phone",
+        "timezone",
+        "timeSlot",
+        "message",
+        "newsletter",
+        "enquiryType",
+        "company",
+        "job"
+      ]
+    },
+    "validationMessage": {
+      "type": "text"
+    },
+    "loading": {
+      "type": "component",
+      "repeatable": false,
+      "component": "core.highlight"
+    },
+    "options": {
+      "type": "component",
+      "repeatable": true,
+      "component": "core.options"
+    },
+    "defaultValue": {
+      "type": "string"
+    }
+  }
+}
