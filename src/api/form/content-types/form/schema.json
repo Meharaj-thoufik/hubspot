@@ -75,25 +75,50 @@
     "verifiedMessage": {
       "type": "component",
       "repeatable": false,
-      "component": "core.highlight"
+      "component": "core.highlight",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "unVerifiedMessage": {
       "type": "component",
       "repeatable": false,
-      "component": "core.highlight"
+      "component": "core.highlight",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "terms": {
       "type": "component",
       "repeatable": false,
-      "component": "core.button"
+      "component": "core.button",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "privacy": {
       "type": "component",
       "repeatable": false,
-      "component": "core.button"
+      "component": "core.button",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "policyDescription": {
-      "type": "text"
+      "type": "text",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }
