@@ -39,7 +39,8 @@
         "newsletter",
         "enquiryType",
         "company",
-        "job"
+        "job",
+        "product"
       ]
     },
     "validationMessage": {
