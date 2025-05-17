@@ -46,9 +46,26 @@ export interface CoreFormField extends Struct.ComponentSchema {
     displayName: 'FormField';
   };
   attributes: {
-    className: Schema.Attribute.Text;
     defaultValue: Schema.Attribute.String;
-    errorMessage: Schema.Attribute.Text;
+    fieldDisplay: Schema.Attribute.Enumeration<
+      [
+        'Half Width, Right Padding',
+        'Half Width, Left Padding',
+        'Full Width, Small Bottom Space',
+        'Half Width on Tablet, Right Padding',
+        'Half Width on Tablet, Left Padding',
+        'Full Width, Larger Bottom Space',
+        'Half Width on Tablet, Right Padding Medium 2.5',
+        'Half Width on Tablet, Left Padding Medium 2.5',
+        'Half Width on Tablet, Right Padding Small',
+        'Half Width on Tablet, Left Padding Small',
+        'Half Width on Tablet, Small Bottom Space',
+        'Full Width, Medium Right Padding 2.5',
+        'Full Width, Medium Left Padding 2.5',
+        'Half Width on Tablet (No Margin)',
+        'Full Width (No Margin)',
+      ]
+    >;
     loading: Schema.Attribute.Component<'core.highlight', false>;
     name: Schema.Attribute.Enumeration<
       [
