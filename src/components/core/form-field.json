@@ -26,12 +26,6 @@
     "required": {
       "type": "boolean"
     },
-    "className": {
-      "type": "text"
-    },
-    "errorMessage": {
-      "type": "text"
-    },
     "name": {
       "type": "enumeration",
       "enum": [
@@ -63,6 +57,26 @@
     },
     "defaultValue": {
       "type": "string"
+    },
+    "fieldDisplay": {
+      "type": "enumeration",
+      "enum": [
+        "Half Width, Right Padding",
+        "Half Width, Left Padding",
+        "Full Width, Small Bottom Space",
+        "Half Width on Tablet, Right Padding",
+        "Half Width on Tablet, Left Padding",
+        "Full Width, Larger Bottom Space",
+        "Half Width on Tablet, Right Padding Medium 2.5",
+        "Half Width on Tablet, Left Padding Medium 2.5",
+        "Half Width on Tablet, Right Padding Small",
+        "Half Width on Tablet, Left Padding Small",
+        "Half Width on Tablet, Small Bottom Space",
+        "Full Width, Medium Right Padding 2.5",
+        "Full Width, Medium Left Padding 2.5",
+        "Half Width on Tablet (No Margin)",
+        "Full Width (No Margin)"
+      ]
     }
   }
 }
