@@ -80,6 +80,7 @@ export interface CoreFormField extends Struct.ComponentSchema {
         'enquiryType',
         'company',
         'job',
+        'product',
       ]
     >;
     options: Schema.Attribute.Component<'core.options', true>;
