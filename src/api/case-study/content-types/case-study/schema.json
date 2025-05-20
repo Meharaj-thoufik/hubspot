@@ -17,7 +17,12 @@
   },
   "attributes": {
     "name": {
-      "type": "string"
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "slug": {
       "type": "uid",
@@ -26,27 +31,52 @@
     "heroSection": {
       "type": "component",
       "repeatable": false,
-      "component": "shared.card"
+      "component": "shared.card",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "problemSection": {
       "type": "component",
       "repeatable": false,
-      "component": "shared.callout"
+      "component": "shared.callout",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "solutionSection": {
       "type": "component",
       "repeatable": false,
-      "component": "shared.solution"
+      "component": "shared.solution",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "sidebarData": {
       "type": "component",
       "repeatable": true,
-      "component": "shared.card"
+      "component": "shared.card",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "relatedCaseStudies": {
       "type": "component",
       "repeatable": true,
-      "component": "shared.card"
+      "component": "shared.card",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "ctaSection": {
       "type": "component",
