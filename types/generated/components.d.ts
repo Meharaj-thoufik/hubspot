@@ -171,6 +171,22 @@ export interface CorePlan extends Struct.ComponentSchema {
   };
 }
 
+export interface CoreSeoIcons extends Struct.ComponentSchema {
+  collectionName: 'components_core_seo_icons';
+  info: {
+    description: '';
+    displayName: 'SEO Icons';
+  };
+  attributes: {
+    alt: Schema.Attribute.String;
+    height: Schema.Attribute.BigInteger;
+    sizes: Schema.Attribute.String;
+    type: Schema.Attribute.String;
+    url: Schema.Attribute.String;
+    width: Schema.Attribute.BigInteger;
+  };
+}
+
 export interface CoreTestimonial extends Struct.ComponentSchema {
   collectionName: 'components_core_testimonials';
   info: {
@@ -248,6 +264,50 @@ export interface SharedHero extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedPageMetadata extends Struct.ComponentSchema {
+  collectionName: 'components_shared_page_metadata';
+  info: {
+    description: '';
+    displayName: 'Page Metadata';
+  };
+  attributes: {
+    canonical: Schema.Attribute.String;
+    category: Schema.Attribute.Enumeration<['Business']>;
+    description: Schema.Attribute.Text;
+    keywords: Schema.Attribute.Component<'core.highlight', true>;
+    ogDescription: Schema.Attribute.String;
+    ogImages: Schema.Attribute.Component<'core.seo-icons', true>;
+    ogLocale: Schema.Attribute.String;
+    ogSiteName: Schema.Attribute.String;
+    ogTitle: Schema.Attribute.String;
+    ogType: Schema.Attribute.Enumeration<
+      [
+        'website',
+        'article',
+        'book',
+        'profile',
+        'music.song',
+        'music.album',
+        'music.playlist',
+        'music.radio_station',
+        'video.movie',
+        'video.episode',
+        'video.tv_show',
+        'video.other',
+      ]
+    >;
+    ogUrl: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+    twitterCard: Schema.Attribute.Enumeration<
+      ['summary', 'summary_large_image', 'player', 'app']
+    >;
+    twitterCreator: Schema.Attribute.String;
+    twitterDescription: Schema.Attribute.String;
+    twitterImage: Schema.Attribute.Component<'core.seo-icons', true>;
+    twitterTitle: Schema.Attribute.String;
+  };
+}
+
 export interface SharedPlanFeature extends Struct.ComponentSchema {
   collectionName: 'components_shared_plan_features';
   info: {
@@ -301,11 +361,13 @@ declare module '@strapi/strapi' {
       'core.image': CoreImage;
       'core.options': CoreOptions;
       'core.plan': CorePlan;
+      'core.seo-icons': CoreSeoIcons;
       'core.testimonial': CoreTestimonial;
       'shared.callout': SharedCallout;
       'shared.card': SharedCard;
       'shared.feature': SharedFeature;
       'shared.hero': SharedHero;
+      'shared.page-metadata': SharedPageMetadata;
       'shared.plan-feature': SharedPlanFeature;
       'shared.solution': SharedSolution;
       'shared.teck-stack': SharedTeckStack;
