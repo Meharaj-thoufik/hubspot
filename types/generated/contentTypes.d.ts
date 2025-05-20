@@ -563,25 +563,55 @@ export interface ApiCaseStudyCaseStudy extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
-    heroSection: Schema.Attribute.Component<'shared.card', false>;
+    heroSection: Schema.Attribute.Component<'shared.card', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::case-study.case-study'
     >;
-    name: Schema.Attribute.String;
+    name: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     pdfName: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }>;
-    problemSection: Schema.Attribute.Component<'shared.callout', false>;
+    problemSection: Schema.Attribute.Component<'shared.callout', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     publishedAt: Schema.Attribute.DateTime;
-    relatedCaseStudies: Schema.Attribute.Component<'shared.card', true>;
-    sidebarData: Schema.Attribute.Component<'shared.card', true>;
+    relatedCaseStudies: Schema.Attribute.Component<'shared.card', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    sidebarData: Schema.Attribute.Component<'shared.card', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     slug: Schema.Attribute.UID<'name'>;
-    solutionSection: Schema.Attribute.Component<'shared.solution', false>;
+    solutionSection: Schema.Attribute.Component<'shared.solution', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
