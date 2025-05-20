@@ -739,6 +739,58 @@ export interface ApiFooterFooter extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiGlobalMetaGlobalMeta extends Struct.SingleTypeSchema {
+  collectionName: 'global_metas';
+  info: {
+    displayName: 'GlobalMeta';
+    pluralName: 'global-metas';
+    singularName: 'global-meta';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    apple: Schema.Attribute.Component<'core.seo-icons', true>;
+    appleWebAppCapable: Schema.Attribute.Boolean;
+    appleWebAppStatusBarStyle: Schema.Attribute.Enumeration<
+      ['default', 'black', 'black-translucent']
+    >;
+    appleWebAppTitle: Schema.Attribute.String;
+    applicationName: Schema.Attribute.String;
+    authorsName: Schema.Attribute.String;
+    authorsURL: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    creator: Schema.Attribute.String;
+    googleBotFollow: Schema.Attribute.Boolean;
+    googleBotIndex: Schema.Attribute.Boolean;
+    googleBotMaxImagePreview: Schema.Attribute.Enumeration<
+      ['none', 'standard', 'large']
+    >;
+    googleBotMaxSnippet: Schema.Attribute.Integer;
+    googleBotMaxVideoPreview: Schema.Attribute.Integer;
+    icons: Schema.Attribute.Component<'core.seo-icons', true>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::global-meta.global-meta'
+    > &
+      Schema.Attribute.Private;
+    manifest: Schema.Attribute.String;
+    metadataBase: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    publisher: Schema.Attribute.String;
+    robotsFollow: Schema.Attribute.Boolean;
+    robotsIndex: Schema.Attribute.Boolean;
+    robotsNocache: Schema.Attribute.Boolean;
+    shortcut: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiHomeHome extends Struct.SingleTypeSchema {
   collectionName: 'homes';
   info: {
@@ -779,6 +831,7 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
       }>;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::home.home'>;
+    metaData: Schema.Attribute.Component<'shared.page-metadata', false>;
     problemSection: Schema.Attribute.Component<'shared.hero', true> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -2019,7 +2072,6 @@ export interface PluginUsersPermissionsUser
   };
   options: {
     draftAndPublish: false;
-    timestamps: true;
   };
   attributes: {
     blocked: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
@@ -2079,6 +2131,7 @@ declare module '@strapi/strapi' {
       'api::contact.contact': ApiContactContact;
       'api::event.event': ApiEventEvent;
       'api::footer.footer': ApiFooterFooter;
+      'api::global-meta.global-meta': ApiGlobalMetaGlobalMeta;
       'api::home.home': ApiHomeHome;
       'api::industry.industry': ApiIndustryIndustry;
       'api::navbar.navbar': ApiNavbarNavbar;

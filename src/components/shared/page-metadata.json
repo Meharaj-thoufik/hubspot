@@ -1,0 +1,90 @@
+{
+  "collectionName": "components_shared_page_metadata",
+  "info": {
+    "displayName": "Page Metadata",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "keywords": {
+      "type": "component",
+      "repeatable": true,
+      "component": "core.highlight"
+    },
+    "canonical": {
+      "type": "string"
+    },
+    "ogTitle": {
+      "type": "string"
+    },
+    "ogDescription": {
+      "type": "string"
+    },
+    "ogUrl": {
+      "type": "string"
+    },
+    "ogSiteName": {
+      "type": "string"
+    },
+    "ogLocale": {
+      "type": "string"
+    },
+    "ogImages": {
+      "type": "component",
+      "repeatable": true,
+      "component": "core.seo-icons"
+    },
+    "twitterTitle": {
+      "type": "string"
+    },
+    "twitterDescription": {
+      "type": "string"
+    },
+    "twitterCreator": {
+      "type": "string"
+    },
+    "twitterImage": {
+      "type": "component",
+      "repeatable": true,
+      "component": "core.seo-icons"
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "Business"
+      ]
+    },
+    "twitterCard": {
+      "type": "enumeration",
+      "enum": [
+        "summary",
+        "summary_large_image",
+        "player",
+        "app"
+      ]
+    },
+    "ogType": {
+      "type": "enumeration",
+      "enum": [
+        "website",
+        "article",
+        "book",
+        "profile",
+        "music.song",
+        "music.album",
+        "music.playlist",
+        "music.radio_station",
+        "video.movie",
+        "video.episode",
+        "video.tv_show",
+        "video.other"
+      ]
+    }
+  }
+}
