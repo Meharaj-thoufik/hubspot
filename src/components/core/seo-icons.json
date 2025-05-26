@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_core_seo_icons",
+  "info": {
+    "displayName": "SEO Icons",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "url": {
+      "type": "string"
+    },
+    "sizes": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "width": {
+      "type": "biginteger"
+    },
+    "height": {
+      "type": "biginteger"
+    },
+    "alt": {
+      "type": "string"
+    }
+  }
+}

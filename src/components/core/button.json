@@ -6,23 +6,6 @@
   },
   "options": {},
   "attributes": {
-    "label": {
-      "type": "string"
-    },
-    "href": {
-      "type": "string"
-    },
-    "variant": {
-      "type": "enumeration",
-      "enum": [
-        "default",
-        "outline",
-        "ghost",
-        "secondary",
-        "destructive",
-        "link"
-      ]
-    },
     "icon": {
       "type": "string"
     },
@@ -37,6 +20,23 @@
     },
     "description": {
       "type": "text"
+    },
+    "label": {
+      "type": "string"
+    },
+    "href": {
+      "type": "string"
+    },
+    "variant": {
+      "type": "enumeration",
+      "enum": [
+        "default",
+        "outline",
+        "ghost",
+        "secondary",
+        "destructive",
+        "ink"
+      ]
     }
   }
 }

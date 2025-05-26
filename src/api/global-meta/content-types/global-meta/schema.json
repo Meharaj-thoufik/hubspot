@@ -1,0 +1,91 @@
+{
+  "kind": "singleType",
+  "collectionName": "global_metas",
+  "info": {
+    "singularName": "global-meta",
+    "pluralName": "global-metas",
+    "displayName": "GlobalMeta"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "metadataBase": {
+      "type": "string"
+    },
+    "robotsIndex": {
+      "type": "boolean"
+    },
+    "robotsFollow": {
+      "type": "boolean"
+    },
+    "robotsNocache": {
+      "type": "boolean"
+    },
+    "googleBotIndex": {
+      "type": "boolean"
+    },
+    "googleBotFollow": {
+      "type": "boolean"
+    },
+    "googleBotMaxSnippet": {
+      "type": "integer"
+    },
+    "googleBotMaxImagePreview": {
+      "type": "enumeration",
+      "enum": [
+        "none",
+        "standard",
+        "large"
+      ]
+    },
+    "googleBotMaxVideoPreview": {
+      "type": "integer"
+    },
+    "authorsName": {
+      "type": "string"
+    },
+    "authorsURL": {
+      "type": "string"
+    },
+    "creator": {
+      "type": "string"
+    },
+    "publisher": {
+      "type": "string"
+    },
+    "applicationName": {
+      "type": "string"
+    },
+    "icons": {
+      "type": "component",
+      "repeatable": true,
+      "component": "core.seo-icons"
+    },
+    "apple": {
+      "type": "component",
+      "repeatable": true,
+      "component": "core.seo-icons"
+    },
+    "shortcut": {
+      "type": "string"
+    },
+    "appleWebAppCapable": {
+      "type": "boolean"
+    },
+    "appleWebAppTitle": {
+      "type": "string"
+    },
+    "appleWebAppStatusBarStyle": {
+      "type": "enumeration",
+      "enum": [
+        "default",
+        "black",
+        "black-translucent"
+      ]
+    },
+    "manifest": {
+      "type": "string"
+    }
+  }
+}

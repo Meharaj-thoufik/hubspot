@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_core_contacts",
+  "info": {
+    "displayName": "Contact",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "address": {
+      "type": "string"
+    },
+    "phoneLabel": {
+      "type": "string"
+    },
+    "phoneHref": {
+      "type": "string"
+    },
+    "emailLabel": {
+      "type": "string"
+    },
+    "emailHref": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "websiteLabel": {
+      "type": "string"
+    },
+    "websiteHref": {
+      "type": "string"
+    },
+    "label": {
+      "type": "string"
+    }
+  }
+}

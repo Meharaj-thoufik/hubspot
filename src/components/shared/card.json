@@ -1,0 +1,52 @@
+{
+  "collectionName": "components_shared_cards",
+  "info": {
+    "displayName": "Card",
+    "icon": "apps",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "header": {
+      "type": "component",
+      "repeatable": false,
+      "component": "core.header"
+    },
+    "image": {
+      "type": "component",
+      "repeatable": false,
+      "component": "core.image"
+    },
+    "buttons": {
+      "type": "component",
+      "repeatable": true,
+      "component": "core.button"
+    },
+    "link": {
+      "type": "component",
+      "repeatable": true,
+      "component": "core.button"
+    },
+    "list": {
+      "type": "component",
+      "repeatable": true,
+      "component": "core.highlight"
+    },
+    "avatar": {
+      "type": "component",
+      "repeatable": false,
+      "component": "core.image"
+    },
+    "avatarDetails": {
+      "type": "component",
+      "repeatable": false,
+      "component": "core.highlight"
+    },
+    "tag": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string"
+    }
+  }
+}

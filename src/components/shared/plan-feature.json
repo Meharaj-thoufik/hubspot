@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_shared_plan_features",
+  "info": {
+    "displayName": "PlanFeature",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "tableHead": {
+      "type": "string"
+    },
+    "pricingPlans": {
+      "type": "component",
+      "repeatable": true,
+      "component": "core.plan"
+    },
+    "features": {
+      "type": "component",
+      "repeatable": true,
+      "component": "core.highlight"
+    }
+  }
+}

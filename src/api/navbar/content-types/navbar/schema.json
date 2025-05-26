@@ -16,7 +16,17 @@
     }
   },
   "attributes": {
-    "Product": {
+    "logo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "core.button",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "menu": {
       "type": "component",
       "repeatable": true,
       "component": "core.button",
@@ -26,17 +36,37 @@
         }
       }
     },
-    "Industry": {
+    "product": {
       "type": "component",
       "repeatable": true,
+      "component": "core.button",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      },
-      "component": "core.button"
+      }
     },
-    "More": {
+    "industry": {
+      "type": "component",
+      "repeatable": true,
+      "component": "core.button",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "more": {
+      "type": "component",
+      "repeatable": true,
+      "component": "core.button",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "language": {
       "type": "component",
       "repeatable": true,
       "component": "core.button",

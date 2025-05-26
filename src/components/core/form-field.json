@@ -1,0 +1,83 @@
+{
+  "collectionName": "components_core_form_fields",
+  "info": {
+    "displayName": "FormField",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "date",
+        "timezone",
+        "timeslot",
+        "text",
+        "phone",
+        "email",
+        "textarea",
+        "checkbox",
+        "select"
+      ]
+    },
+    "placeholder": {
+      "type": "text"
+    },
+    "required": {
+      "type": "boolean"
+    },
+    "name": {
+      "type": "enumeration",
+      "enum": [
+        "name",
+        "date",
+        "email",
+        "phone",
+        "timezone",
+        "timeSlot",
+        "message",
+        "newsletter",
+        "enquiryType",
+        "company",
+        "job",
+        "product"
+      ]
+    },
+    "validationMessage": {
+      "type": "text"
+    },
+    "loading": {
+      "type": "component",
+      "repeatable": false,
+      "component": "core.highlight"
+    },
+    "options": {
+      "type": "component",
+      "repeatable": true,
+      "component": "core.options"
+    },
+    "defaultValue": {
+      "type": "string"
+    },
+    "fieldDisplay": {
+      "type": "enumeration",
+      "enum": [
+        "Half Width, Right Padding",
+        "Half Width, Left Padding",
+        "Full Width, Small Bottom Space",
+        "Half Width on Tablet, Right Padding",
+        "Half Width on Tablet, Left Padding",
+        "Full Width, Larger Bottom Space",
+        "Half Width on Tablet, Right Padding Medium 2.5",
+        "Half Width on Tablet, Left Padding Medium 2.5",
+        "Half Width on Tablet, Right Padding Small",
+        "Half Width on Tablet, Left Padding Small",
+        "Half Width on Tablet, Small Bottom Space",
+        "Full Width, Medium Right Padding 2.5",
+        "Full Width, Medium Left Padding 2.5",
+        "Half Width on Tablet (No Margin)",
+        "Full Width (No Margin)"
+      ]
+    }
+  }
+}

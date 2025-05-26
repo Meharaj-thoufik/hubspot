@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_core_highlights",
+  "info": {
+    "displayName": " Highlight",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "icon": {
+      "type": "string"
+    },
+    "label": {
+      "type": "text"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}
