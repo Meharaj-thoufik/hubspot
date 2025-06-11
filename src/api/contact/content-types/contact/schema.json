@@ -45,6 +45,16 @@
           "localized": true
         }
       }
+    },
+    "metaData": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.plan-feature",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }
