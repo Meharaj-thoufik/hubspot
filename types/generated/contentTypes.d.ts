@@ -412,6 +412,7 @@ export interface ApiAboutUsAboutUs extends Struct.SingleTypeSchema {
       'oneToMany',
       'api::about-us.about-us'
     >;
+    metaData: Schema.Attribute.Component<'shared.page-metadata', false>;
     previousYears: Schema.Attribute.Component<'core.highlight', true> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -506,6 +507,7 @@ export interface ApiCareerCareer extends Struct.SingleTypeSchema {
       }>;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::career.career'>;
+    metaData: Schema.Attribute.Component<'shared.page-metadata', false>;
     planSection: Schema.Attribute.Component<'shared.hero', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -569,6 +571,7 @@ export interface ApiCaseStudyCaseStudy extends Struct.CollectionTypeSchema {
       'oneToMany',
       'api::case-study.case-study'
     >;
+    metaData: Schema.Attribute.Component<'shared.page-metadata', false>;
     name: Schema.Attribute.String;
     pdfName: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
@@ -631,6 +634,7 @@ export interface ApiContactContact extends Struct.SingleTypeSchema {
       'oneToMany',
       'api::contact.contact'
     >;
+    metaData: Schema.Attribute.Component<'shared.page-metadata', false>;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -666,6 +670,7 @@ export interface ApiEventEvent extends Struct.SingleTypeSchema {
       }>;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::event.event'>;
+    metaData: Schema.Attribute.Component<'shared.page-metadata', false>;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -1039,6 +1044,7 @@ export interface ApiIndustryIndustry extends Struct.CollectionTypeSchema {
       'oneToMany',
       'api::industry.industry'
     >;
+    metaData: Schema.Attribute.Component<'shared.page-metadata', false>;
     name: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -1218,6 +1224,7 @@ export interface ApiPricingPricing extends Struct.SingleTypeSchema {
       'oneToMany',
       'api::pricing.pricing'
     >;
+    metaData: Schema.Attribute.Component<'shared.page-metadata', false>;
     planFooter: Schema.Attribute.Component<'shared.callout', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -1310,6 +1317,7 @@ export interface ApiPrivacyPolicyPrivacyPolicy extends Struct.SingleTypeSchema {
       'oneToMany',
       'api::privacy-policy.privacy-policy'
     >;
+    metaData: Schema.Attribute.Component<'shared.page-metadata', false>;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -1375,6 +1383,7 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
       'oneToMany',
       'api::product.product'
     >;
+    metaData: Schema.Attribute.Component<'shared.page-metadata', false>;
     name: Schema.Attribute.String;
     pricingHighlight: Schema.Attribute.Component<'shared.callout', false> &
       Schema.Attribute.SetPluginOptions<{
@@ -1517,6 +1526,7 @@ export interface ApiSolutionSolution extends Struct.SingleTypeSchema {
       'oneToMany',
       'api::solution.solution'
     >;
+    metaData: Schema.Attribute.Component<'shared.page-metadata', false>;
     planCard: Schema.Attribute.Component<'shared.card', true> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -1652,6 +1662,7 @@ export interface ApiTermsAndConditionTermsAndCondition
       'oneToMany',
       'api::terms-and-condition.terms-and-condition'
     >;
+    metaData: Schema.Attribute.Component<'shared.page-metadata', false>;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -1701,6 +1712,7 @@ export interface ApiTrendTrend extends Struct.SingleTypeSchema {
       }>;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::trend.trend'>;
+    metaData: Schema.Attribute.Component<'shared.page-metadata', false>;
     noiseSection: Schema.Attribute.Component<'shared.teck-stack', true> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {

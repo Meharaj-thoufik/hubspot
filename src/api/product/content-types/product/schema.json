@@ -162,6 +162,11 @@
           "localized": true
         }
       }
+    },
+    "metaData": {
+      "type": "component",
+      "repeatable": false,
+      "component": "shared.page-metadata"
     }
   }
 }
