@@ -679,7 +679,7 @@ export interface ApiContactContact extends Struct.SingleTypeSchema {
       'oneToMany',
       'api::contact.contact'
     >;
-    metaData: Schema.Attribute.Component<'shared.plan-feature', false> &
+    metaData: Schema.Attribute.Component<'shared.page-metadata', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
