@@ -272,7 +272,7 @@ export interface SharedPageMetadata extends Struct.ComponentSchema {
   };
   attributes: {
     canonical: Schema.Attribute.String;
-    category: Schema.Attribute.Enumeration<['Business']>;
+    category: Schema.Attribute.String;
     description: Schema.Attribute.Text;
     keywords: Schema.Attribute.Component<'core.highlight', true>;
     ogDescription: Schema.Attribute.String;
@@ -303,7 +303,7 @@ export interface SharedPageMetadata extends Struct.ComponentSchema {
     >;
     twitterCreator: Schema.Attribute.String;
     twitterDescription: Schema.Attribute.String;
-    twitterImage: Schema.Attribute.Component<'core.seo-icons', true>;
+    twitterImage: Schema.Attribute.Component<'core.seo-icons', false>;
     twitterTitle: Schema.Attribute.String;
   };
 }

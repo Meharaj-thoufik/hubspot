@@ -51,14 +51,8 @@
     },
     "twitterImage": {
       "type": "component",
-      "repeatable": true,
+      "repeatable": false,
       "component": "core.seo-icons"
-    },
-    "category": {
-      "type": "enumeration",
-      "enum": [
-        "Business"
-      ]
     },
     "twitterCard": {
       "type": "enumeration",
@@ -85,6 +79,9 @@
         "video.tv_show",
         "video.other"
       ]
+    },
+    "category": {
+      "type": "string"
     }
   }
 }
