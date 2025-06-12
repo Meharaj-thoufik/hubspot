@@ -303,7 +303,7 @@ export interface SharedPageMetadata extends Struct.ComponentSchema {
     >;
     twitterCreator: Schema.Attribute.String;
     twitterDescription: Schema.Attribute.String;
-    twitterImage: Schema.Attribute.Component<'core.seo-icons', true>;
+    twitterImage: Schema.Attribute.String;
     twitterTitle: Schema.Attribute.String;
   };
 }

@@ -79,9 +79,7 @@
       "type": "string"
     },
     "twitterImage": {
-      "type": "component",
-      "repeatable": true,
-      "component": "core.seo-icons"
+      "type": "string"
     }
   }
 }
