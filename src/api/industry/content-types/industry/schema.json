@@ -98,16 +98,6 @@
         }
       }
     },
-    "successStoryCard": {
-      "type": "component",
-      "repeatable": true,
-      "component": "shared.card",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
-    },
     "problemSection": {
       "type": "component",
       "repeatable": false,

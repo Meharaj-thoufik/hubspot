@@ -1119,12 +1119,6 @@ export interface ApiIndustryIndustry extends Struct.CollectionTypeSchema {
       }>;
     publishedAt: Schema.Attribute.DateTime;
     slug: Schema.Attribute.UID<'name'>;
-    successStoryCard: Schema.Attribute.Component<'shared.card', true> &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
     successStoryHeaderFooter: Schema.Attribute.Component<
       'shared.callout',
       false
