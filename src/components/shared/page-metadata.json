@@ -49,11 +49,6 @@
     "twitterCreator": {
       "type": "string"
     },
-    "twitterImage": {
-      "type": "component",
-      "repeatable": false,
-      "component": "core.seo-icons"
-    },
     "twitterCard": {
       "type": "enumeration",
       "enum": [
@@ -81,6 +76,9 @@
       ]
     },
     "category": {
+      "type": "string"
+    },
+    "twitterImage": {
       "type": "string"
     }
   }
