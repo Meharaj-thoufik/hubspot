@@ -49,7 +49,7 @@
     "metaData": {
       "type": "component",
       "repeatable": false,
-      "component": "shared.plan-feature",
+      "component": "shared.page-metadata",
       "pluginOptions": {
         "i18n": {
           "localized": true
