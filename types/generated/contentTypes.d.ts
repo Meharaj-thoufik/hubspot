@@ -911,6 +911,7 @@ export interface ApiFormForm extends Struct.CollectionTypeSchema {
 export interface ApiGlobalMetaGlobalMeta extends Struct.SingleTypeSchema {
   collectionName: 'global_metas';
   info: {
+    description: '';
     displayName: 'GlobalMeta';
     pluralName: 'global-metas';
     singularName: 'global-meta';
@@ -953,6 +954,7 @@ export interface ApiGlobalMetaGlobalMeta extends Struct.SingleTypeSchema {
     robotsFollow: Schema.Attribute.Boolean;
     robotsIndex: Schema.Attribute.Boolean;
     robotsNocache: Schema.Attribute.Boolean;
+    schemaData: Schema.Attribute.JSON;
     shortcut: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -1595,7 +1597,12 @@ export interface ApiSolutionSolution extends Struct.SingleTypeSchema {
       'oneToMany',
       'api::solution.solution'
     >;
-    metaData: Schema.Attribute.Component<'shared.page-metadata', false>;
+    metaData: Schema.Attribute.Component<'shared.page-metadata', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     planCard: Schema.Attribute.Component<'shared.card', true> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
