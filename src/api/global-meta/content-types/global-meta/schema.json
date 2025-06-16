@@ -4,7 +4,8 @@
   "info": {
     "singularName": "global-meta",
     "pluralName": "global-metas",
-    "displayName": "GlobalMeta"
+    "displayName": "GlobalMeta",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -86,6 +87,9 @@
     },
     "manifest": {
       "type": "string"
+    },
+    "schemaData": {
+      "type": "json"
     }
   }
 }
