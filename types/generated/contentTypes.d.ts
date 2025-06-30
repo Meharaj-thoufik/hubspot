@@ -1010,6 +1010,7 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
         };
       }>;
     publishedAt: Schema.Attribute.DateTime;
+    schemaData: Schema.Attribute.JSON;
     socialSection: Schema.Attribute.Component<'shared.hero', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -1120,6 +1121,7 @@ export interface ApiIndustryIndustry extends Struct.CollectionTypeSchema {
         };
       }>;
     publishedAt: Schema.Attribute.DateTime;
+    schemaData: Schema.Attribute.JSON;
     slug: Schema.Attribute.UID<'name'>;
     successStoryHeaderFooter: Schema.Attribute.Component<
       'shared.callout',
