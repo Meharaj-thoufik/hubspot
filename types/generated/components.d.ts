@@ -297,6 +297,7 @@ export interface SharedPageMetadata extends Struct.ComponentSchema {
       ]
     >;
     ogUrl: Schema.Attribute.String;
+    schemaData: Schema.Attribute.JSON;
     title: Schema.Attribute.String;
     twitterCard: Schema.Attribute.Enumeration<
       ['summary', 'summary_large_image', 'player', 'app']

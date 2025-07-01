@@ -80,6 +80,9 @@
     },
     "twitterImage": {
       "type": "string"
+    },
+    "schemaData": {
+      "type": "json"
     }
   }
 }
