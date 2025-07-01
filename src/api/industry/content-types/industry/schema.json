@@ -117,9 +117,6 @@
           "localized": true
         }
       }
-    },
-    "schemaData": {
-      "type": "json"
     }
   }
 }
