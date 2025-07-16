@@ -1,0 +1,43 @@
+{
+  "collectionName": "components_shared_locations",
+  "info": {
+    "displayName": "Location",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "index": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "badge": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "contacts": {
+      "type": "component",
+      "repeatable": true,
+      "component": "core.highlight"
+    },
+    "navigation": {
+      "type": "component",
+      "repeatable": false,
+      "component": "core.button"
+    },
+    "isReversed": {
+      "type": "boolean"
+    },
+    "svg": {
+      "type": "component",
+      "repeatable": false,
+      "component": "core.image"
+    }
+  }
+}
