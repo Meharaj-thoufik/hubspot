@@ -127,6 +127,7 @@ export interface CoreHighlight extends Struct.ComponentSchema {
     description: Schema.Attribute.Text;
     icon: Schema.Attribute.String;
     label: Schema.Attribute.Text;
+    type: Schema.Attribute.String;
   };
 }
 
@@ -264,6 +265,25 @@ export interface SharedHero extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedLocation extends Struct.ComponentSchema {
+  collectionName: 'components_shared_locations';
+  info: {
+    description: '';
+    displayName: 'Location';
+  };
+  attributes: {
+    badge: Schema.Attribute.String;
+    contacts: Schema.Attribute.Component<'core.highlight', true>;
+    description: Schema.Attribute.Text;
+    index: Schema.Attribute.String;
+    isReversed: Schema.Attribute.Boolean;
+    navigation: Schema.Attribute.Component<'core.button', false>;
+    svg: Schema.Attribute.Component<'core.image', false>;
+    title: Schema.Attribute.String;
+    type: Schema.Attribute.String;
+  };
+}
+
 export interface SharedPageMetadata extends Struct.ComponentSchema {
   collectionName: 'components_shared_page_metadata';
   info: {
@@ -368,6 +388,7 @@ declare module '@strapi/strapi' {
       'shared.card': SharedCard;
       'shared.feature': SharedFeature;
       'shared.hero': SharedHero;
+      'shared.location': SharedLocation;
       'shared.page-metadata': SharedPageMetadata;
       'shared.plan-feature': SharedPlanFeature;
       'shared.solution': SharedSolution;

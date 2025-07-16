@@ -679,6 +679,9 @@ export interface ApiContactContact extends Struct.SingleTypeSchema {
       'oneToMany',
       'api::contact.contact'
     >;
+    locationCard: Schema.Attribute.Component<'shared.location', true>;
+    locationHeader: Schema.Attribute.Component<'core.header', false>;
+    locationHeadline: Schema.Attribute.String;
     metaData: Schema.Attribute.Component<'shared.page-metadata', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {

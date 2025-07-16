@@ -55,6 +55,19 @@
           "localized": true
         }
       }
+    },
+    "locationHeader": {
+      "type": "component",
+      "repeatable": false,
+      "component": "core.header"
+    },
+    "locationHeadline": {
+      "type": "string"
+    },
+    "locationCard": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.location"
     }
   }
 }
