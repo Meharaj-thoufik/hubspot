@@ -59,15 +59,30 @@
     "locationHeader": {
       "type": "component",
       "repeatable": false,
-      "component": "core.header"
+      "component": "core.header",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "locationHeadline": {
-      "type": "string"
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "locationCard": {
       "type": "component",
       "repeatable": true,
-      "component": "shared.location"
+      "component": "shared.location",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }
